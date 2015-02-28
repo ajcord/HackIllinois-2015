@@ -330,36 +330,39 @@
                             <button opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KM-i2-C9v">
                                 <rect key="frame" x="16" y="247" width="568" height="166"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Location 2">
+                                <state key="normal" title="Location">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="centerLocationClick:" destination="aKX-Rd-kTP" eventType="touchUpInside" id="yDR-Hn-rcz"/>
+                                    <action selector="locationClick:" destination="aKX-Rd-kTP" eventType="touchUpInside" id="Ea6-VF-JGI"/>
                                     <segue destination="wmf-Sd-CaS" kind="show" identifier="LocationTwoSegue" id="cYh-lO-RLz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8l7-xp-Dz4">
                                 <rect key="frame" x="16" y="427" width="568" height="165"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Location 3">
+                                <state key="normal" title="Location">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="bottomLocationClick:" destination="aKX-Rd-kTP" eventType="touchUpInside" id="XR7-Rn-dpG"/>
+                                    <action selector="locationClick:" destination="aKX-Rd-kTP" eventType="touchUpInside" id="X2R-pK-mLe"/>
                                     <segue destination="wmf-Sd-CaS" kind="show" identifier="LocationThreeSegue" id="mdx-r3-Zft"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGA-xc-ZeJ">
                                 <rect key="frame" x="16" y="72" width="568" height="165"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Location 1">
+                                <state key="normal" title="Location">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="topLocationClick:" destination="aKX-Rd-kTP" eventType="touchUpInside" id="RDw-U6-RCe"/>
+                                    <action selector="locationClick:" destination="aKX-Rd-kTP" eventType="touchUpInside" id="ed9-my-mgA"/>
                                     <segue destination="wmf-Sd-CaS" kind="show" identifier="LocationOneSegue" id="S43-av-WU2"/>
                                 </connections>
                             </button>
@@ -392,6 +395,11 @@
                     <navigationItem key="navigationItem" title="Choose a Location" id="A0c-sK-xWf">
                         <barButtonItem key="backBarButtonItem" title="Back" id="YXk-vw-OtI"/>
                     </navigationItem>
+                    <connections>
+                        <outletCollection property="locationButtons" destination="QGA-xc-ZeJ" collectionClass="NSMutableArray" id="otm-rF-DQ6"/>
+                        <outletCollection property="locationButtons" destination="3KM-i2-C9v" collectionClass="NSMutableArray" id="fRr-f0-40U"/>
+                        <outletCollection property="locationButtons" destination="8l7-xp-Dz4" collectionClass="NSMutableArray" id="tzS-Bp-V1z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkp-IU-Tlx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

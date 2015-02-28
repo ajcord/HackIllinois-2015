@@ -6,18 +6,13 @@
 //  Copyright (c) 2015 PointOfIgnition. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import MapKit
 
 class FoodMapViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }
