@@ -10,8 +10,15 @@ import UIKit
 import CoreLocation
 import MapKit
 
+<<<<<<< HEAD
 class ViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager: CLLocationManager!
+=======
+class ViewController: UIViewController {
+
+    @IBOutlet weak var foodButton: UIButton!
+    @IBOutlet weak var homeButton: UIButton!
+>>>>>>> c6ff81c8a26c700e964197be8aaa0f97f53819f5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,11 +57,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 }
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func foodButtonClick(sender: UIButton) {
+        
+        
     }
     
+    @IBAction func homeButtonClick(sender: UIButton) {
+        
+    }
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> c6ff81c8a26c700e964197be8aaa0f97f53819f5
 }
 
