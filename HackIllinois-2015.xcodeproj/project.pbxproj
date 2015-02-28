@@ -13,6 +13,14 @@
 		FA3694881AA0E6AF00C18BBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3694871AA0E6AF00C18BBF /* Images.xcassets */; };
 		FA36948B1AA0E6AF00C18BBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3694891AA0E6AF00C18BBF /* LaunchScreen.xib */; };
 		FA3694971AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3694961AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift */; };
+		FAAF79C21AA1A0C3002D467E /* BDBOAuth1RequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF79B81AA1A0C3002D467E /* BDBOAuth1RequestOperationManager.m */; };
+		FAAF79C31AA1A0C3002D467E /* BDBOAuth1RequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF79BA1AA1A0C3002D467E /* BDBOAuth1RequestSerializer.m */; };
+		FAAF79C41AA1A0C3002D467E /* BDBOAuth1SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF79BC1AA1A0C3002D467E /* BDBOAuth1SessionManager.m */; };
+		FAAF79C51AA1A0C3002D467E /* NSDictionary+BDBOAuth1Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF79BF1AA1A0C3002D467E /* NSDictionary+BDBOAuth1Manager.m */; };
+		FAAF79C61AA1A0C3002D467E /* NSString+BDBOAuth1Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF79C11AA1A0C3002D467E /* NSString+BDBOAuth1Manager.m */; };
+		FAC1FDA01AA181DA0038E158 /* yelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1FD9F1AA181DA0038E158 /* yelp.swift */; };
+		FAC1FDB01AA18BD30038E158 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1FDAB1AA18BD30038E158 /* YelpClient.swift */; };
+		FAC1FDB51AA18C480038E158 /* YelpBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1FDB41AA18C480038E158 /* YelpBusiness.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +30,48 @@
 			proxyType = 1;
 			remoteGlobalIDString = FA36947A1AA0E6AF00C18BBF;
 			remoteInfo = "HackIllinois-2015";
+		};
+		FAAF79AF1AA1A09B002D467E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAAF79AA1AA1A09B002D467E /* BDBOAuth1ManagerDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8F375C51808743300C40148;
+			remoteInfo = "Twitter Demo";
+		};
+		FAAF79B11AA1A09B002D467E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAAF79AA1AA1A09B002D467E /* BDBOAuth1ManagerDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8284CAE18464EF900B3C6AA;
+			remoteInfo = "Flickr Demo";
+		};
+		FAC1FD991AA181230038E158 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC1FD941AA181220038E158 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F451E3C5195B8CD80051434C;
+			remoteInfo = OAuthSwiftDemo;
+		};
+		FAC1FD9B1AA181230038E158 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC1FD941AA181220038E158 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F435027A1A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
+		FAC1FDA71AA18B890038E158 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC1FDA21AA18B880038E158 /* Yelp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 222D8A5519CCF9F900D2DB53;
+			remoteInfo = Yelp;
+		};
+		FAC1FDA91AA18B890038E158 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC1FDA21AA18B880038E158 /* Yelp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 222D8A6A19CCF9F900D2DB53;
+			remoteInfo = YelpTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -36,6 +86,23 @@
 		FA3694901AA0E6AF00C18BBF /* HackIllinois-2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HackIllinois-2015Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3694951AA0E6AF00C18BBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3694961AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackIllinois_2015Tests.swift; sourceTree = "<group>"; };
+		FAAF79A21AA19A13002D467E /* HackIllinois_2015-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HackIllinois_2015-Bridging-Header.h"; path = "HackIllinois-2015/model/Yelp API/HackIllinois_2015-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		FAAF79AA1AA1A09B002D467E /* BDBOAuth1ManagerDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BDBOAuth1ManagerDemo.xcodeproj; path = "../../Downloads/BDBOAuth1Manager-master/BDBOAuth1ManagerDemo/BDBOAuth1ManagerDemo.xcodeproj"; sourceTree = "<group>"; };
+		FAAF79B71AA1A0C3002D467E /* BDBOAuth1RequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBOAuth1RequestOperationManager.h; sourceTree = "<group>"; };
+		FAAF79B81AA1A0C3002D467E /* BDBOAuth1RequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBOAuth1RequestOperationManager.m; sourceTree = "<group>"; };
+		FAAF79B91AA1A0C3002D467E /* BDBOAuth1RequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBOAuth1RequestSerializer.h; sourceTree = "<group>"; };
+		FAAF79BA1AA1A0C3002D467E /* BDBOAuth1RequestSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBOAuth1RequestSerializer.m; sourceTree = "<group>"; };
+		FAAF79BB1AA1A0C3002D467E /* BDBOAuth1SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBOAuth1SessionManager.h; sourceTree = "<group>"; };
+		FAAF79BC1AA1A0C3002D467E /* BDBOAuth1SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBOAuth1SessionManager.m; sourceTree = "<group>"; };
+		FAAF79BE1AA1A0C3002D467E /* NSDictionary+BDBOAuth1Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+BDBOAuth1Manager.h"; sourceTree = "<group>"; };
+		FAAF79BF1AA1A0C3002D467E /* NSDictionary+BDBOAuth1Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+BDBOAuth1Manager.m"; sourceTree = "<group>"; };
+		FAAF79C01AA1A0C3002D467E /* NSString+BDBOAuth1Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BDBOAuth1Manager.h"; sourceTree = "<group>"; };
+		FAAF79C11AA1A0C3002D467E /* NSString+BDBOAuth1Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BDBOAuth1Manager.m"; sourceTree = "<group>"; };
+		FAC1FD941AA181220038E158 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../Downloads/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
+		FAC1FD9F1AA181DA0038E158 /* yelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = yelp.swift; path = "HackIllinois-2015/model/yelp.swift"; sourceTree = SOURCE_ROOT; };
+		FAC1FDA21AA18B880038E158 /* Yelp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Yelp.xcodeproj; path = "../../Downloads/CodePath-Yelp-master/Yelp.xcodeproj"; sourceTree = "<group>"; };
+		FAC1FDAB1AA18BD30038E158 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
+		FAC1FDB41AA18C480038E158 /* YelpBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YelpBusiness.swift; path = ../../../.Trash/YelpBusiness.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +126,9 @@
 		FA3694721AA0E6AF00C18BBF = {
 			isa = PBXGroup;
 			children = (
+				FAAF79AA1AA1A09B002D467E /* BDBOAuth1ManagerDemo.xcodeproj */,
+				FAC1FDA21AA18B880038E158 /* Yelp.xcodeproj */,
+				FAC1FD941AA181220038E158 /* OAuthSwift.xcodeproj */,
 				FA36947D1AA0E6AF00C18BBF /* HackIllinois-2015 */,
 				FA3694931AA0E6AF00C18BBF /* HackIllinois-2015Tests */,
 				FA36947C1AA0E6AF00C18BBF /* Products */,
@@ -83,6 +153,7 @@
 				FA3694871AA0E6AF00C18BBF /* Images.xcassets */,
 				FA3694891AA0E6AF00C18BBF /* LaunchScreen.xib */,
 				FA36947E1AA0E6AF00C18BBF /* Supporting Files */,
+				FAC1FDA11AA181E90038E158 /* model */,
 			);
 			path = "HackIllinois-2015";
 			sourceTree = "<group>";
@@ -110,6 +181,80 @@
 				FA3694951AA0E6AF00C18BBF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAAF79AB1AA1A09B002D467E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF79B01AA1A09B002D467E /* Twitter Demo.app */,
+				FAAF79B21AA1A09B002D467E /* Flickr Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAAF79B61AA1A0C3002D467E /* BDBOAuth1Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF79B71AA1A0C3002D467E /* BDBOAuth1RequestOperationManager.h */,
+				FAAF79B81AA1A0C3002D467E /* BDBOAuth1RequestOperationManager.m */,
+				FAAF79B91AA1A0C3002D467E /* BDBOAuth1RequestSerializer.h */,
+				FAAF79BA1AA1A0C3002D467E /* BDBOAuth1RequestSerializer.m */,
+				FAAF79BB1AA1A0C3002D467E /* BDBOAuth1SessionManager.h */,
+				FAAF79BC1AA1A0C3002D467E /* BDBOAuth1SessionManager.m */,
+				FAAF79BD1AA1A0C3002D467E /* Categories */,
+			);
+			name = BDBOAuth1Manager;
+			path = "../../BDBOAuth1Manager-master/BDBOAuth1Manager";
+			sourceTree = "<group>";
+		};
+		FAAF79BD1AA1A0C3002D467E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF79BE1AA1A0C3002D467E /* NSDictionary+BDBOAuth1Manager.h */,
+				FAAF79BF1AA1A0C3002D467E /* NSDictionary+BDBOAuth1Manager.m */,
+				FAAF79C01AA1A0C3002D467E /* NSString+BDBOAuth1Manager.h */,
+				FAAF79C11AA1A0C3002D467E /* NSString+BDBOAuth1Manager.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		FAC1FD951AA181220038E158 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAC1FD9A1AA181230038E158 /* OAuthSwiftDemo.app */,
+				FAC1FD9C1AA181230038E158 /* OAuthSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAC1FDA11AA181E90038E158 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FAC1FDAD1AA18BD30038E158 /* API */,
+				FAC1FD9F1AA181DA0038E158 /* yelp.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		FAC1FDA31AA18B880038E158 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAC1FDA81AA18B890038E158 /* Yelp.app */,
+				FAC1FDAA1AA18B890038E158 /* YelpTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAC1FDAD1AA18BD30038E158 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF79B61AA1A0C3002D467E /* BDBOAuth1Manager */,
+				FAC1FDAB1AA18BD30038E158 /* YelpClient.swift */,
+				FAC1FDB41AA18C480038E158 /* YelpBusiness.swift */,
+				FAAF79A21AA19A13002D467E /* HackIllinois_2015-Bridging-Header.h */,
+			);
+			name = API;
+			path = "../../../Downloads/CodePath-Yelp-master/Yelp";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +325,20 @@
 			mainGroup = FA3694721AA0E6AF00C18BBF;
 			productRefGroup = FA36947C1AA0E6AF00C18BBF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FAAF79AB1AA1A09B002D467E /* Products */;
+					ProjectRef = FAAF79AA1AA1A09B002D467E /* BDBOAuth1ManagerDemo.xcodeproj */;
+				},
+				{
+					ProductGroup = FAC1FD951AA181220038E158 /* Products */;
+					ProjectRef = FAC1FD941AA181220038E158 /* OAuthSwift.xcodeproj */;
+				},
+				{
+					ProductGroup = FAC1FDA31AA18B880038E158 /* Products */;
+					ProjectRef = FAC1FDA21AA18B880038E158 /* Yelp.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FA36947A1AA0E6AF00C18BBF /* HackIllinois-2015 */,
@@ -187,6 +346,51 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FAAF79B01AA1A09B002D467E /* Twitter Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Twitter Demo.app";
+			remoteRef = FAAF79AF1AA1A09B002D467E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FAAF79B21AA1A09B002D467E /* Flickr Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Flickr Demo.app";
+			remoteRef = FAAF79B11AA1A09B002D467E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FAC1FD9A1AA181230038E158 /* OAuthSwiftDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftDemo.app;
+			remoteRef = FAC1FD991AA181230038E158 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FAC1FD9C1AA181230038E158 /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = FAC1FD9B1AA181230038E158 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FAC1FDA81AA18B890038E158 /* Yelp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Yelp.app;
+			remoteRef = FAC1FDA71AA18B890038E158 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FAC1FDAA1AA18B890038E158 /* YelpTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = YelpTests.xctest;
+			remoteRef = FAC1FDA91AA18B890038E158 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FA3694791AA0E6AF00C18BBF /* Resources */ = {
@@ -213,8 +417,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAF79C21AA1A0C3002D467E /* BDBOAuth1RequestOperationManager.m in Sources */,
+				FAC1FDB01AA18BD30038E158 /* YelpClient.swift in Sources */,
 				FA3694831AA0E6AF00C18BBF /* ViewController.swift in Sources */,
+				FAC1FDB51AA18C480038E158 /* YelpBusiness.swift in Sources */,
+				FAAF79C51AA1A0C3002D467E /* NSDictionary+BDBOAuth1Manager.m in Sources */,
+				FAAF79C31AA1A0C3002D467E /* BDBOAuth1RequestSerializer.m in Sources */,
+				FAAF79C61AA1A0C3002D467E /* NSString+BDBOAuth1Manager.m in Sources */,
+				FAAF79C41AA1A0C3002D467E /* BDBOAuth1SessionManager.m in Sources */,
 				FA3694811AA0E6AF00C18BBF /* AppDelegate.swift in Sources */,
+				FAC1FDA01AA181DA0038E158 /* yelp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +557,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/alex/Xcode Projects/HackIllinois-2015/HackIllinois-2015/model/Yelp API/HackIllinois_2015-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -358,6 +571,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/alex/Xcode Projects/HackIllinois-2015/HackIllinois-2015/model/Yelp API/HackIllinois_2015-Bridging-Header.h";
 			};
 			name = Release;
 		};
