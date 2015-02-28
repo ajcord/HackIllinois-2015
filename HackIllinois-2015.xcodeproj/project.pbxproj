@@ -161,6 +161,7 @@
 				TargetAttributes = {
 					FA36947A1AA0E6AF00C18BBF = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 2S3D8J8M3T;
 					};
 					FA36948F1AA0E6AF00C18BBF = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -338,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "HackIllinois-2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "HackIllinois-2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,6 +410,7 @@
 				FA36949C1AA0E6AF00C18BBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA36949D1AA0E6AF00C18BBF /* Build configuration list for PBXNativeTarget "HackIllinois-2015Tests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +419,7 @@
 				FA36949F1AA0E6AF00C18BBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
