@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import MapKit
 
 class DinerChoiceViewController : UIViewController {
+    
+    var options: [MKMapItem]!
     
     @IBOutlet var locationButtons: [UIButton]!
     
