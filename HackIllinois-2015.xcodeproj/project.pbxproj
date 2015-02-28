@@ -161,6 +161,7 @@
 				TargetAttributes = {
 					FA36947A1AA0E6AF00C18BBF = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 2S3D8J8M3T;
 					};
 					FA36948F1AA0E6AF00C18BBF = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -407,6 +408,7 @@
 				FA36949C1AA0E6AF00C18BBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA36949D1AA0E6AF00C18BBF /* Build configuration list for PBXNativeTarget "HackIllinois-2015Tests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +417,7 @@
 				FA36949F1AA0E6AF00C18BBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
