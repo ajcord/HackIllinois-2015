@@ -22,6 +22,7 @@
 		FA3694881AA0E6AF00C18BBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3694871AA0E6AF00C18BBF /* Images.xcassets */; };
 		FA36948B1AA0E6AF00C18BBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3694891AA0E6AF00C18BBF /* LaunchScreen.xib */; };
 		FA3694971AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3694961AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift */; };
+		FAFA1FB51AA2451F00CCF43D /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA1FB41AA2451F00CCF43D /* LocationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		FA3694901AA0E6AF00C18BBF /* HackIllinois-2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HackIllinois-2015Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3694951AA0E6AF00C18BBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3694961AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackIllinois_2015Tests.swift; sourceTree = "<group>"; };
+		FAFA1FB41AA2451F00CCF43D /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		FA36947D1AA0E6AF00C18BBF /* HackIllinois-2015 */ = {
 			isa = PBXGroup;
 			children = (
+				FAFA1FB31AA2451F00CCF43D /* Model */,
 				FA3694801AA0E6AF00C18BBF /* AppDelegate.swift */,
 				BC9E86311AA21E99000B8E3D /* ViewControllers */,
 				FA3694841AA0E6AF00C18BBF /* Main.storyboard */,
@@ -147,6 +150,14 @@
 				FA3694951AA0E6AF00C18BBF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAFA1FB31AA2451F00CCF43D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAFA1FB41AA2451F00CCF43D /* LocationController.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 				BC9E863D1AA22068000B8E3D /* MapsController.swift in Sources */,
 				BC9E86331AA21EFC000B8E3D /* FoodViewController.swift in Sources */,
 				BC9E863B1AA21FED000B8E3D /* InfoViewController.swift in Sources */,
+				FAFA1FB51AA2451F00CCF43D /* LocationController.swift in Sources */,
 				BC027AA71AA21E2300DBE3AF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
