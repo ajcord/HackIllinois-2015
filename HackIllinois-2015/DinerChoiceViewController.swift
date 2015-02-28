@@ -10,20 +10,14 @@ import UIKit
 
 class DinerChoiceViewController : UIViewController {
     
+    @IBOutlet var locationButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBAction func topLocationClick(sender: UIButton) {
-        
-    }
-    
-    @IBAction func centerLocationClick(sender: UIButton) {
-        
-    }
-    
-    @IBAction func bottomLocationClick(sender: UIButton) {
+    @IBAction func locationClick(sender: UIButton) {
         
     }
     
