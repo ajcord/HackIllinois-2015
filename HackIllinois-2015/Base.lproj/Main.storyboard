@@ -8,7 +8,7 @@
         <!--Info-->
         <scene sceneID="lw3-ja-HXE">
             <objects>
-                <viewController id="X8c-F2-f5c" customClass="InfoViewController" customModule="HackIllinois_2015" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="X8c-F2-f5c" customClass="InfoViewController" customModule="Buzzed_Buddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g9o-CJ-bpZ"/>
                         <viewControllerLayoutGuide type="bottom" id="FQo-oK-fPs"/>
@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="938" y="-400"/>
         </scene>
-        <!--App Name-->
+        <!--Buzzed Buddy-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HackIllinois_2015" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Buzzed_Buddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -88,7 +88,7 @@
                             <constraint firstItem="jNV-XS-nDc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wmE-vX-L5F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="App Name" id="XTH-6S-AXB">
+                    <navigationItem key="navigationItem" title="Buzzed Buddy" id="XTH-6S-AXB">
                         <barButtonItem key="leftBarButtonItem" image="Info-icon" id="Epy-Zx-P4y">
                             <connections>
                                 <segue destination="X8c-F2-f5c" kind="show" identifier="InfoSegue" id="DiA-AT-El0"/>
@@ -112,7 +112,7 @@
         <!--Settings-->
         <scene sceneID="RMk-4n-nrc">
             <objects>
-                <viewController id="onF-7y-YZP" customClass="SettingsViewController" customModule="HackIllinois_2015" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="onF-7y-YZP" customClass="SettingsViewController" customModule="Buzzed_Buddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xYS-Pm-Ecs"/>
                         <viewControllerLayoutGuide type="bottom" id="6Ga-E2-NKA"/>
@@ -133,7 +133,7 @@
         <!--Food-->
         <scene sceneID="DJ1-d8-5dv">
             <objects>
-                <viewController id="yON-yR-U43" customClass="FoodViewController" customModule="HackIllinois_2015" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yON-yR-U43" customClass="FoodViewController" customModule="Buzzed_Buddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JBi-eh-1Lt"/>
                         <viewControllerLayoutGuide type="bottom" id="9tQ-Y3-ucq"/>
@@ -318,7 +318,7 @@
         <!--Choose a Location-->
         <scene sceneID="DPl-4D-UxH">
             <objects>
-                <viewController id="aKX-Rd-kTP" customClass="DinerChoiceViewController" customModule="HackIllinois_2015" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aKX-Rd-kTP" customClass="DinerChoiceViewController" customModule="Buzzed_Buddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tqn-1t-EuA"/>
                         <viewControllerLayoutGuide type="bottom" id="SsD-jh-ypt"/>
@@ -408,7 +408,7 @@
         <!--FOOD!-->
         <scene sceneID="Czv-c9-OI0">
             <objects>
-                <viewController id="wmf-Sd-CaS" customClass="FoodMapViewController" customModule="HackIllinois_2015" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wmf-Sd-CaS" customClass="FoodMapViewController" customModule="Buzzed_Buddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PhI-qJ-Gpc"/>
                         <viewControllerLayoutGuide type="bottom" id="vtc-43-KFZ"/>
@@ -417,7 +417,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aHi-CQ-Wgu" customClass="MapsController" customModule="HackIllinois_2015" customModuleProvider="target">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aHi-CQ-Wgu" customClass="MapsController" customModule="Buzzed_Buddy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </mapView>
                         </subviews>
@@ -438,7 +438,7 @@
         <!--Home-->
         <scene sceneID="LM2-Mu-eSD">
             <objects>
-                <viewController id="mMT-Gt-7ym" customClass="HomeViewController" customModule="HackIllinois_2015" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mMT-Gt-7ym" customClass="HomeViewController" customModule="Buzzed_Buddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2VQ-2v-vJD"/>
                         <viewControllerLayoutGuide type="bottom" id="sYe-BZ-Zoc"/>
@@ -447,7 +447,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gO0-kw-6L9" customClass="MapsController" customModule="HackIllinois_2015" customModuleProvider="target">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gO0-kw-6L9" customClass="MapsController" customModule="Buzzed_Buddy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </mapView>
                         </subviews>

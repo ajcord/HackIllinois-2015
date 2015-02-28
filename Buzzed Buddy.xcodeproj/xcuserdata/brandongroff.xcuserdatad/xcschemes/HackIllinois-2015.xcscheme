@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA36947A1AA0E6AF00C18BBF"
-               BuildableName = "HackIllinois-2015.app"
-               BlueprintName = "HackIllinois-2015"
-               ReferencedContainer = "container:HackIllinois-2015.xcodeproj">
+               BuildableName = "Buzzed Buddy.app"
+               BlueprintName = "Buzzed Buddy"
+               ReferencedContainer = "container:Buzzed Buddy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA36948F1AA0E6AF00C18BBF"
-               BuildableName = "HackIllinois-2015Tests.xctest"
-               BlueprintName = "HackIllinois-2015Tests"
-               ReferencedContainer = "container:HackIllinois-2015.xcodeproj">
+               BuildableName = "Buzzed BuddyTests.xctest"
+               BlueprintName = "Buzzed BuddyTests"
+               ReferencedContainer = "container:Buzzed Buddy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA36948F1AA0E6AF00C18BBF"
-               BuildableName = "HackIllinois-2015Tests.xctest"
-               BlueprintName = "HackIllinois-2015Tests"
-               ReferencedContainer = "container:HackIllinois-2015.xcodeproj">
+               BuildableName = "Buzzed BuddyTests.xctest"
+               BlueprintName = "Buzzed BuddyTests"
+               ReferencedContainer = "container:Buzzed Buddy.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA36947A1AA0E6AF00C18BBF"
-            BuildableName = "HackIllinois-2015.app"
-            BlueprintName = "HackIllinois-2015"
-            ReferencedContainer = "container:HackIllinois-2015.xcodeproj">
+            BuildableName = "Buzzed Buddy.app"
+            BlueprintName = "Buzzed Buddy"
+            ReferencedContainer = "container:Buzzed Buddy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA36947A1AA0E6AF00C18BBF"
-            BuildableName = "HackIllinois-2015.app"
-            BlueprintName = "HackIllinois-2015"
-            ReferencedContainer = "container:HackIllinois-2015.xcodeproj">
+            BuildableName = "Buzzed Buddy.app"
+            BlueprintName = "Buzzed Buddy"
+            ReferencedContainer = "container:Buzzed Buddy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA36947A1AA0E6AF00C18BBF"
-            BuildableName = "HackIllinois-2015.app"
-            BlueprintName = "HackIllinois-2015"
-            ReferencedContainer = "container:HackIllinois-2015.xcodeproj">
+            BuildableName = "Buzzed Buddy.app"
+            BlueprintName = "Buzzed Buddy"
+            ReferencedContainer = "container:Buzzed Buddy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

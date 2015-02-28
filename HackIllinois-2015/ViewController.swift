@@ -15,7 +15,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        var food:NSAttributedString = NSAttributedString(string: "Food", attributes: [
+            NSForegroundColorAttributeName: (UIColor .whiteColor()) , NSStrokeWidthAttributeName: -3, NSStrokeColorAttributeName : (UIColor .blackColor())
+        ])
+        var home:NSAttributedString = NSAttributedString(string: "Home", attributes: [
+            NSForegroundColorAttributeName: (UIColor .whiteColor()) , NSStrokeWidthAttributeName: -3, NSStrokeColorAttributeName : (UIColor .blackColor())
+            ])
+        foodButton.setAttributedTitle(food, forState: UIControlState.Normal);
+        homeButton.setAttributedTitle(home, forState: UIControlState.Normal);
     }
     
     @IBAction func foodButtonClick(sender: UIButton) {
