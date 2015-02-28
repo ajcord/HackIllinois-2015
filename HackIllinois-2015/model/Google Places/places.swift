@@ -1,10 +1,18 @@
 //
 //  places.swift
-//  HackIllinois-2015
 //
-//  Created by Alex Cordonnier on 2/28/15.
-//  Copyright (c) 2015 PointOfIgnition. All rights reserved.
+//  Created by Kirby Shabaga on 9/8/14.
+//  Modified by Alex Cordonnier on 2/28/15.
+
+// ------------------------------------------------------------------------------------------
+// Ref: https://developers.google.com/places/documentation/search#PlaceSearchRequests
 //
+// Example search
+//
+// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=cruise&key=AddYourOwnKeyHere
+//
+// required parameters: key, location, radius
+// ------------------------------------------------------------------------------------------
 
 import Foundation
 import CoreLocation
@@ -49,6 +57,8 @@ class GooglePlaces {
         var mapItems = [MKMapItem]()
         
         var json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+        
+        println("json: \(json)")
         
         var results = json["results"] as? Array<NSDictionary>
         println("results = \(results!.count)")

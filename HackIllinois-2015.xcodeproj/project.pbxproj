@@ -15,6 +15,8 @@
 		FA3694971AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3694961AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift */; };
 		FAC15A6D1AA1ACC800D04F2A /* places.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC15A6C1AA1ACC800D04F2A /* places.swift */; };
 		FAC15A6F1AA1ACDD00D04F2A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC15A6E1AA1ACDD00D04F2A /* Keys.swift */; };
+		FAC15A711AA21BF400D04F2A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC15A701AA21BF400D04F2A /* MapKit.framework */; };
+		FAC15A731AA21CB100D04F2A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC15A721AA21CB100D04F2A /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		FA3694961AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackIllinois_2015Tests.swift; sourceTree = "<group>"; };
 		FAC15A6C1AA1ACC800D04F2A /* places.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = places.swift; sourceTree = "<group>"; };
 		FAC15A6E1AA1ACDD00D04F2A /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		FAC15A701AA21BF400D04F2A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FAC15A721AA21CB100D04F2A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC15A731AA21CB100D04F2A /* CoreLocation.framework in Frameworks */,
+				FAC15A711AA21BF400D04F2A /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		FA3694721AA0E6AF00C18BBF = {
 			isa = PBXGroup;
 			children = (
+				FAC15A721AA21CB100D04F2A /* CoreLocation.framework */,
+				FAC15A701AA21BF400D04F2A /* MapKit.framework */,
 				FA36947D1AA0E6AF00C18BBF /* HackIllinois-2015 */,
 				FA3694931AA0E6AF00C18BBF /* HackIllinois-2015Tests */,
 				FA36947C1AA0E6AF00C18BBF /* Products */,
@@ -185,6 +193,11 @@
 					FA36947A1AA0E6AF00C18BBF = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 2S3D8J8M3T;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FA36948F1AA0E6AF00C18BBF = {
 						CreatedOnToolsVersion = 6.1.1;
