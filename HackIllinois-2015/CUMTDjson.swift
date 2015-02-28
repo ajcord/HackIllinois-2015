@@ -13,6 +13,11 @@ import CoreLocation
 class CUMTDjson{
     var jsonDict:NSDictionary = NSDictionary()//Should be changed in init
     
+    func parseJSONDict(){
+        
+    }
+    
+    
     func getURLFromLatLon(origin_latitude:String, origin_longitude:String,dest_latitude:String,dest_longitude:String)->NSURL{
         let version = "v2.2"
         let format = "json"
@@ -24,6 +29,7 @@ class CUMTDjson{
         let url = NSURL(string: "https://developer.cumtd.com/api/\(version)/\(format)/\(method)?key=\(key)&origin_lat=\(origin_latitude)&origin_lon=\(origin_longitude)&destination_lat=\(dest_latitude)&destination_lon=\(dest_longitude)&minimize=walking")
         return url!
     }
+    
     
     init(){
         
@@ -65,11 +71,6 @@ class CUMTDjson{
             if(status["code"] as Int != 200){
                 NSException(name: "Failed to get bus schedule",reason: status["msg"] as? String, userInfo: nil).raise()
             }
-            let iten = jsonDict["itineraries"] as NSArray
-            let firstiten = iten[0] as NSDictionary
-            print(iten)
-            //println("Got here")
-            let legs = firstiten["legs"] as NSArray
         } else {
             NSException(name: "Failed to get bus schedule",reason: "Could not connect to Internet", userInfo: nil).raise()
             
