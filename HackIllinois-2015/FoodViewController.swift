@@ -11,9 +11,12 @@ import MapKit
 
 class FoodViewController : UIViewController {
     
+    var locationController: LocationController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        locationController = LocationController()
     }
     
     @IBAction func bugerButtonClick(sender: UIButton) {
@@ -34,14 +37,14 @@ class FoodViewController : UIViewController {
     
     func doSearch(foodType: String) {
         //Get the location
-        let locationController = LocationController()
-        let location = locationController.getLocation()
-        println(location)
-        
+        let location = locationController.updateLocation()
         
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = foodType
-//        request.region = mapView.region
+        request.region = MKCoordinateRegion(
+            center: location.coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        )
         
         let search = MKLocalSearch(request: request)
         search.startWithCompletionHandler { (response, error) in
@@ -50,7 +53,11 @@ class FoodViewController : UIViewController {
     }
     
     func updateDinerChoices(places: [MKMapItem]) {
-        
+        println(places)
+        var p = places
+        let location = locationController.getLocation()
+//        p.sort({ (($0.placemark as MKAnnotation).coordinate - location.coordinate) > (($1.placemark as MKAnnotation).coordinate - location.coordinate) })
+        println(p[0])
     }
     
 }
