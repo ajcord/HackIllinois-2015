@@ -10,6 +10,8 @@
 		BC027AA31AA195CC00DBE3AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC027AA21AA195CC00DBE3AF /* MapKit.framework */; };
 		BC027AA51AA21BBE00DBE3AF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC027AA41AA21BBE00DBE3AF /* CoreLocation.framework */; };
 		BC027AA71AA21E2300DBE3AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC027AA61AA21E2300DBE3AF /* HomeViewController.swift */; };
+		BC86BB7A1AA243620008AB0A /* CUMTDjson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86BB791AA243620008AB0A /* CUMTDjson.swift */; };
+		BC86BB7C1AA243BC0008AB0A /* SettingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86BB7B1AA243BC0008AB0A /* SettingKeys.swift */; };
 		BC9E86331AA21EFC000B8E3D /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E86321AA21EFC000B8E3D /* FoodViewController.swift */; };
 		BC9E86351AA21F63000B8E3D /* DinerChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E86341AA21F63000B8E3D /* DinerChoiceViewController.swift */; };
 		BC9E86371AA21F9A000B8E3D /* FoodMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E86361AA21F9A000B8E3D /* FoodMapViewController.swift */; };
@@ -38,6 +40,8 @@
 		BC027AA21AA195CC00DBE3AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BC027AA41AA21BBE00DBE3AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BC027AA61AA21E2300DBE3AF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BC86BB791AA243620008AB0A /* CUMTDjson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CUMTDjson.swift; sourceTree = "<group>"; };
+		BC86BB7B1AA243BC0008AB0A /* SettingKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingKeys.swift; sourceTree = "<group>"; };
 		BC9E86321AA21EFC000B8E3D /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		BC9E86341AA21F63000B8E3D /* DinerChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerChoiceViewController.swift; sourceTree = "<group>"; };
 		BC9E86361AA21F9A000B8E3D /* FoodMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMapViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 				BC027AA61AA21E2300DBE3AF /* HomeViewController.swift */,
 				BC9E86321AA21EFC000B8E3D /* FoodViewController.swift */,
 				BC9E86341AA21F63000B8E3D /* DinerChoiceViewController.swift */,
+				BC86BB791AA243620008AB0A /* CUMTDjson.swift */,
 				BC9E86361AA21F9A000B8E3D /* FoodMapViewController.swift */,
 				BC9E86381AA21FBF000B8E3D /* SettingsViewController.swift */,
 				BC9E863A1AA21FED000B8E3D /* InfoViewController.swift */,
@@ -120,6 +125,7 @@
 				FA3694871AA0E6AF00C18BBF /* Images.xcassets */,
 				FA3694891AA0E6AF00C18BBF /* LaunchScreen.xib */,
 				FA36947E1AA0E6AF00C18BBF /* Supporting Files */,
+				BC86BB7B1AA243BC0008AB0A /* SettingKeys.swift */,
 			);
 			path = "HackIllinois-2015";
 			sourceTree = "<group>";
@@ -256,12 +262,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3694831AA0E6AF00C18BBF /* ViewController.swift in Sources */,
+				BC86BB7A1AA243620008AB0A /* CUMTDjson.swift in Sources */,
 				BC9E86371AA21F9A000B8E3D /* FoodMapViewController.swift in Sources */,
 				BC9E86391AA21FBF000B8E3D /* SettingsViewController.swift in Sources */,
 				FA3694811AA0E6AF00C18BBF /* AppDelegate.swift in Sources */,
 				BC9E86351AA21F63000B8E3D /* DinerChoiceViewController.swift in Sources */,
 				BC9E863D1AA22068000B8E3D /* MapsController.swift in Sources */,
 				BC9E86331AA21EFC000B8E3D /* FoodViewController.swift in Sources */,
+				BC86BB7C1AA243BC0008AB0A /* SettingKeys.swift in Sources */,
 				BC9E863B1AA21FED000B8E3D /* InfoViewController.swift in Sources */,
 				BC027AA71AA21E2300DBE3AF /* HomeViewController.swift in Sources */,
 			);
