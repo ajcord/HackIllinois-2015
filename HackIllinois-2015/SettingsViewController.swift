@@ -58,13 +58,15 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
             print("Settings not found!")
             self.addressTextField.placeholder = SettingsKey.defaultHomeAddress;
         }
-        println(NSUserDefaults.standardUserDefaults().stringForKey("homeAddress")!)
     }
     
     func settingsAlreadySet()->Bool {
+        if (nil == NSUserDefaults.standardUserDefaults().stringForKey("homeAddress")?.hashValue){
+            return false;
+        }
         var latitude:Double = NSUserDefaults.standardUserDefaults().doubleForKey("latitude");
         var longitude:Double = NSUserDefaults.standardUserDefaults().doubleForKey("longitude");
-        var address: String = NSUserDefaults.standardUserDefaults().stringForKey("homeAddress")!;
+        var address:String = NSUserDefaults.standardUserDefaults().stringForKey("homeAddress")!;
         if (latitude == 0.0){
             return false;
         } else if (longitude == 0.0){
