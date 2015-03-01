@@ -30,7 +30,7 @@ class DinerChoiceViewController : UIViewController {
             } else if DinerChoices.typeChoice == "pizza" {
                 choices = DinerChoices.pizzaPlaces
             }
-            var a:Int32 = 1
+            var a:Int32 = 1000
             wait(&a)
         }
        // println("viewDidLoad: \(choices)")
