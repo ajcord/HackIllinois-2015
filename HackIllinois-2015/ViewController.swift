@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        exButton.hidden = NSUserDefaults.standardUserDefaults().boolForKey("specialSettings");
+        exButton.hidden = !NSUserDefaults.standardUserDefaults().boolForKey("specialSettings");
     }
     
     @IBAction func foodButtonClick(sender: UIButton) {

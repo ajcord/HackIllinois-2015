@@ -57,7 +57,7 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func specialSettingsSwitched(sender: UISwitch) {
-        if (self.specialSettingsEnabled()){ //was enabled, now diabled
+        if (NSUserDefaults.standardUserDefaults().boolForKey("specialSettings")){ //was enabled, now diabled
             NSUserDefaults.standardUserDefaults().setBool(false, forKey: "specialSettings")
             numberTextField.hidden = true
             phoneNumberLabel.hidden = true
@@ -70,7 +70,7 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
     println(NSUserDefaults.standardUserDefaults().boolForKey("specialSettings"))
     }
     
-    func specialSettingsEnabled()->Bool{
+    func specialSettingsExist()->Bool{
         var switchState:Bool = NSUserDefaults.standardUserDefaults().boolForKey("specialSettings")
         if (switchState){
             return true
