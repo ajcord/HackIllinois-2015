@@ -466,6 +466,12 @@
                     <navigationItem key="navigationItem" title="Food" id="R63-B0-9p8">
                         <barButtonItem key="backBarButtonItem" title="Back" id="P0V-W0-2Jr"/>
                     </navigationItem>
+                    <connections>
+                        <outletCollection property="foodSelectionButtons" destination="yqR-kG-gRx" collectionClass="NSMutableArray" id="vzb-ba-dAj"/>
+                        <outletCollection property="foodSelectionButtons" destination="zT2-97-PaJ" collectionClass="NSMutableArray" id="smb-Co-h4c"/>
+                        <outletCollection property="foodSelectionButtons" destination="lJq-d2-TJM" collectionClass="NSMutableArray" id="VC5-Gl-bBS"/>
+                        <outletCollection property="foodSelectionButtons" destination="5CS-Tx-JrU" collectionClass="NSMutableArray" id="ObN-3L-YmN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9j7-xh-mda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

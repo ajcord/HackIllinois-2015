@@ -17,7 +17,21 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
         homeMapView.showsUserLocation = true
         homeMapView.delegate = self //May be needed
         var a:CUMTDjson = CUMTDjson()
+        
         let jsonDict = a.generateBusMap()
+        if(jsonDict == NSDictionary()){
+            //The error occured
+            let alert = UIAlertController(title: "Failed to get MTD Data", message: "Turn your Icard around and call safe rides",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel,
+                handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+            return
+            
+        }
         parseJSONDict(jsonDict)
         //fatalError("init(coder:) has not been implemented")
         //mapView(this,
@@ -104,6 +118,13 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
                 let endPoint = MKMapItem(placemark: endplacemark)
                 addNewRoute(beginPoint,destination: endPoint, color: "Walk")
                 homeMapView.addAnnotation(endplacemark)
+                //CLLocationDegrees(Float)
+                //MKCoordinateSpan(latitudeDelta: <#CLLocationDegrees#>, longitudeDelta: <#CLLocationDegrees#>)
+                var deltaLon:CLLocationDegrees = CLLocationDegrees(0.05)
+                var deltaLat = CLLocationDegrees(0.05)
+                var span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: deltaLat, longitudeDelta: deltaLon)
+                var region:MKCoordinateRegion = MKCoordinateRegion(center: beginlocation, span: span)
+                homeMapView.setRegion(region,animated:true)
                 
             } else {
                 // service leg
@@ -129,8 +150,9 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
             }
             
         }
+        
         //var num:Float = SettingsKeys.homeLat.toFloat()!//Should never get none number
-       
+        
     }
     
 }

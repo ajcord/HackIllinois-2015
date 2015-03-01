@@ -59,13 +59,15 @@ class CUMTDjson{
             let status = jsonDict["status"] as NSDictionary
             if(status["code"] as Int != 200){
                 NSException(name: "Failed to get bus schedule",reason: status["msg"] as? String, userInfo: nil).raise()
+                return NSDictionary()
             }
             return jsonDict
         } else {
-            NSException(name: "Failed to get bus schedule",reason: "Could not connect to Internet", userInfo: nil).raise()
+            return NSDictionary()
+            //NSException(name: "Failed to get bus schedule",reason: "Could not connect to Internet", userInfo: nil).raise()
             
         }
        //return jsonDict
-        return NSDictionary()
+        //return NSDictionary()
     }
 }

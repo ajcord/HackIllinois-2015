@@ -40,7 +40,8 @@ public class LocationController {
         
         //Wait for a location
         println("Waiting for location...")
-        while locationManager.location == nil { }
+        var i = 0
+        while locationManager.location == nil { } 
         println("Got location: \(locationManager.location)")
         
         mostRecentLocation = locationManager.location
