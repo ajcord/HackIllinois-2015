@@ -509,14 +509,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gO0-kw-6L9" customClass="MapsController" customModule="Buzzed_Buddy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="516"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navigator" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUl-cl-UzO">
+                                <rect key="frame" x="0.0" y="580" width="600" height="20"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uUl-cl-UzO" secondAttribute="trailing" id="IpB-np-Xdc"/>
                             <constraint firstItem="gO0-kw-6L9" firstAttribute="top" secondItem="2VQ-2v-vJD" secondAttribute="bottom" id="Q5v-34-IpV"/>
+                            <constraint firstItem="uUl-cl-UzO" firstAttribute="top" secondItem="gO0-kw-6L9" secondAttribute="bottom" id="U4Q-SD-hXD"/>
+                            <constraint firstItem="sYe-BZ-Zoc" firstAttribute="top" secondItem="uUl-cl-UzO" secondAttribute="bottom" id="U67-SG-9Zt"/>
                             <constraint firstItem="gO0-kw-6L9" firstAttribute="leading" secondItem="VgJ-Hp-Zn7" secondAttribute="leading" id="dFE-Uu-Uhs"/>
-                            <constraint firstItem="sYe-BZ-Zoc" firstAttribute="top" secondItem="gO0-kw-6L9" secondAttribute="bottom" id="ibn-mE-zoH"/>
+                            <constraint firstItem="uUl-cl-UzO" firstAttribute="leading" secondItem="VgJ-Hp-Zn7" secondAttribute="leading" id="qsl-cG-FCx"/>
                             <constraint firstAttribute="trailing" secondItem="gO0-kw-6L9" secondAttribute="trailing" id="rrY-R0-JpK"/>
                         </constraints>
                     </view>
