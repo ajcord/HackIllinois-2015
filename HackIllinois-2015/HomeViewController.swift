@@ -12,6 +12,8 @@ import MapKit
 class HomeViewController : UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var homeMapView: MKMapView!
+    
+    var directions: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad();
         homeMapView.showsUserLocation = true
@@ -79,11 +81,17 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
             }
         })
     }
-    func showRoute(response: MKDirectionsResponse, color: String){
+    func showRoute(response: MKDirectionsResponse, color: String, isWalk:isBool){
         for route in response.routes as [MKRoute]{
             route.polyline.title = String(color)
             
             homeMapView.addOverlay(route.polyline,level:MKOverlayLevel.AboveRoads)
+            if(isWalk){
+                for  step in route.steps{
+                    //println(step.instructions)
+                    directions.append(step.instructions)
+                }
+            }
             // for step in route.steps{
             //   println(step.instructions)
             //}
@@ -92,8 +100,7 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
     }
     
     func parseJSONDict(jsonDict:NSDictionary){
-        //println("running")
-        // println(jsonDict)
+        directions = []
         let itineraries = jsonDict["itineraries"] as NSArray
         let itinleg = itineraries[0] as NSDictionary
         let legs =  itinleg["legs"] as NSArray
@@ -118,6 +125,22 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
                 let endPoint = MKMapItem(placemark: endplacemark)
                 addNewRoute(beginPoint,destination: endPoint, color: "Walk")
                 homeMapView.addAnnotation(endplacemark)
+                
+               /* let request = MKDirectionsRequest()
+                request.setSource(beginPoint)
+                request.setDestination(endPoint)
+                request.requestsAlternateRoutes = false
+                
+                let direct = MKDirections(request:request)
+                
+                direct.calculateDirectionsWithCompletionHandler({(response:MKDirectionsResponse!, error:NSError!) in
+                    if error != nil{
+                        //Handle error
+                    } else {
+                        //self.showRoute(response)
+                    }
+                })
+                directions.append(direct)*/
                 //CLLocationDegrees(Float)
                 //MKCoordinateSpan(latitudeDelta: <#CLLocationDegrees#>, longitudeDelta: <#CLLocationDegrees#>)
                 var deltaLon:CLLocationDegrees = CLLocationDegrees(0.05)
@@ -125,6 +148,8 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
                 var span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: deltaLat, longitudeDelta: deltaLon)
                 var region:MKCoordinateRegion = MKCoordinateRegion(center: beginlocation, span: span)
                 homeMapView.setRegion(region,animated:true)
+                
+                
                 
             } else {
                 // service leg
