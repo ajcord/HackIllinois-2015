@@ -15,15 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var food:NSAttributedString = NSAttributedString(string: "Food", attributes: [
-            NSForegroundColorAttributeName: (UIColor .whiteColor()) , NSStrokeWidthAttributeName: -3, NSStrokeColorAttributeName : (UIColor .blackColor())
-        ])
-        var home:NSAttributedString = NSAttributedString(string: "Home", attributes: [
-            NSForegroundColorAttributeName: (UIColor .whiteColor()) , NSStrokeWidthAttributeName: -3, NSStrokeColorAttributeName : (UIColor .blackColor())
-            ])
-        foodButton.setAttributedTitle(food, forState: UIControlState.Normal);
-        homeButton.setAttributedTitle(home, forState: UIControlState.Normal);
+        self.setTitleText()
     }
     
     @IBAction func foodButtonClick(sender: UIButton) {
@@ -33,6 +25,17 @@ class ViewController: UIViewController {
     
     @IBAction func homeButtonClick(sender: UIButton) {
         
+    }
+    
+    func setTitleText(){
+        var food:NSAttributedString = NSAttributedString(string: "Food", attributes: [
+            NSForegroundColorAttributeName: (UIColor .whiteColor()) ,NSStrokeWidthAttributeName: -3, NSStrokeColorAttributeName : (UIColor .blackColor())
+            ])
+        var home:NSAttributedString = NSAttributedString(string: "Home", attributes: [
+            NSForegroundColorAttributeName: (UIColor .whiteColor()) , NSStrokeWidthAttributeName: -3, NSStrokeColorAttributeName : (UIColor .blackColor())
+            ])
+        foodButton.setAttributedTitle(food, forState: UIControlState.Normal);
+        homeButton.setAttributedTitle(home, forState: UIControlState.Normal);
     }
 
 }

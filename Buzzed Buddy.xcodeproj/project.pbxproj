@@ -12,6 +12,7 @@
 		BC027AA71AA21E2300DBE3AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC027AA61AA21E2300DBE3AF /* HomeViewController.swift */; };
 		BC62D6E81AA24D6000B1BE24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3694841AA0E6AF00C18BBF /* Main.storyboard */; };
 		BC62D6E91AA24D6500B1BE24 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3694891AA0E6AF00C18BBF /* LaunchScreen.xib */; };
+		BC62D6EB1AA24EC100B1BE24 /* SettingsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC62D6EA1AA24EC100B1BE24 /* SettingsKey.swift */; };
 		BC9E86331AA21EFC000B8E3D /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E86321AA21EFC000B8E3D /* FoodViewController.swift */; };
 		BC9E86351AA21F63000B8E3D /* DinerChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E86341AA21F63000B8E3D /* DinerChoiceViewController.swift */; };
 		BC9E86371AA21F9A000B8E3D /* FoodMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E86361AA21F9A000B8E3D /* FoodMapViewController.swift */; };
@@ -37,6 +38,7 @@
 		BC027AA21AA195CC00DBE3AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BC027AA41AA21BBE00DBE3AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BC027AA61AA21E2300DBE3AF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BC62D6EA1AA24EC100B1BE24 /* SettingsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsKey.swift; path = Model/SettingsKey.swift; sourceTree = "<group>"; };
 		BC9E86321AA21EFC000B8E3D /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		BC9E86341AA21F63000B8E3D /* DinerChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerChoiceViewController.swift; sourceTree = "<group>"; };
 		BC9E86361AA21F9A000B8E3D /* FoodMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMapViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				FA3694801AA0E6AF00C18BBF /* AppDelegate.swift */,
+				BC62D6EA1AA24EC100B1BE24 /* SettingsKey.swift */,
 				BC9E86311AA21E99000B8E3D /* ViewControllers */,
 				FA3694841AA0E6AF00C18BBF /* Main.storyboard */,
 				FA3694871AA0E6AF00C18BBF /* Images.xcassets */,
@@ -260,6 +263,7 @@
 				FA3694811AA0E6AF00C18BBF /* AppDelegate.swift in Sources */,
 				BC9E86351AA21F63000B8E3D /* DinerChoiceViewController.swift in Sources */,
 				BC9E863D1AA22068000B8E3D /* MapsController.swift in Sources */,
+				BC62D6EB1AA24EC100B1BE24 /* SettingsKey.swift in Sources */,
 				BC9E86331AA21EFC000B8E3D /* FoodViewController.swift in Sources */,
 				BC9E863B1AA21FED000B8E3D /* InfoViewController.swift in Sources */,
 				BC027AA71AA21E2300DBE3AF /* HomeViewController.swift in Sources */,
