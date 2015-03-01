@@ -19,7 +19,6 @@ class DinerChoiceViewController : UIViewController {
         super.viewWillAppear(animated)
         
         //Get the choices
-        println("Diner choice is \(DinerChoices.typeChoice)")
         if DinerChoices.typeChoice == "burger" {
             choices = DinerChoices.burgersPlaces
         } else if DinerChoices.typeChoice == "taco" {
@@ -27,7 +26,6 @@ class DinerChoiceViewController : UIViewController {
         } else if DinerChoices.typeChoice == "pizza" {
             choices = DinerChoices.pizzaPlaces
         }
-        println("viewDidLoad: \(choices)")
         
         for i in 0...(locationButtons.count - 1) {
             var button = locationButtons[i]
@@ -44,7 +42,6 @@ class DinerChoiceViewController : UIViewController {
     @IBAction func locationClick(sender: UIButton) {
         for i in 0...(locationButtons.count - 1) {
             if locationButtons[i] == sender {
-                println("Setting placeChoice")
                 DinerChoices.placeChoice = choices[i]
             }
         }
