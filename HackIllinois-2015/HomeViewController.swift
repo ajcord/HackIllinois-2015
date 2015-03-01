@@ -105,6 +105,7 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
         
         if index == directions.count-1 {
             navigatorText.text = concatanateStringArray(directions)
+            navigatorText.textColor = (UIColor .whiteColor())
         }
     }
     
