@@ -18,6 +18,7 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
     
     
     
+    @IBOutlet weak var settingsSwitch: UISwitch!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var addressStatusLabel: UILabel!
     @IBOutlet weak var numberTextField: UITextField!
@@ -27,10 +28,15 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated);
         self.loadSettings()
         addressStatusLabel.hidden = true;
+        println(NSUserDefaults.standardUserDefaults().boolForKey("specialSettings"))
         if (!NSUserDefaults.standardUserDefaults().boolForKey("specialSettings"))
         {//if special settings are disabled, hide phone number field
             numberTextField.hidden = true;
             phoneNumberLabel.hidden = true;
+            settingsSwitch.setOn(false, animated: true);
+        }
+        else {
+            settingsSwitch.setOn(true, animated: true);
         }
     }
     

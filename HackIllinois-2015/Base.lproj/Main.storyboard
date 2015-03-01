@@ -21,7 +21,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omJ-1L-oir">
                                 <rect key="frame" x="16" y="72" width="568" height="520"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Our goal: To make traveling alone on those late nights a little bit safer, and to ensure that our users make it home. 
+                                <mutableString key="text">Our goal: To make traveling alone on those late nights a little bit safer, and to ensure that our users make it home. 
 
 This app intends to aid, not harm users. We accept no responsibility for any actions, damages, or harm done via the usage of this app.
 
@@ -45,8 +45,8 @@ Daniel Carballal, UIUC
 www.github.com/danielcarballal
 
 Paul Gibbons, UIUC
-www.github.com/pualtgibbons
-</string>
+www.github.com/paultgibbons
+</mutableString>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -272,6 +272,7 @@ www.github.com/pualtgibbons
                         <outlet property="addressTextField" destination="Nsv-ek-BaM" id="iAe-GF-as0"/>
                         <outlet property="numberTextField" destination="DpY-Se-lTw" id="vAJ-R1-Ibi"/>
                         <outlet property="phoneNumberLabel" destination="Pim-bN-CIC" id="6O8-7S-ztg"/>
+                        <outlet property="settingsSwitch" destination="wts-dE-CQH" id="I6h-OY-2Na"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGW-V4-Sbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -619,14 +620,13 @@ www.github.com/pualtgibbons
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gO0-kw-6L9" customClass="MapsController" customModule="Buzzed_Buddy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="436"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="386"/>
                             </mapView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujA-xj-sye">
-                                <rect key="frame" x="0.0" y="502" width="600" height="98"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujA-xj-sye">
+                                <rect key="frame" x="0.0" y="450" width="600" height="150"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="FM4-SB-HtS"/>
-                                    <constraint firstAttribute="height" constant="100" id="cJY-vX-3Xv"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
