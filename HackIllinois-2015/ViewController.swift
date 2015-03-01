@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     @IBAction func dialExClick(sender: AnyObject) {
         let number:String = NSUserDefaults.standardUserDefaults().integerForKey("number").description;
         //let number = SettingsKey.defaultNumber
-        var url:NSURL = NSURL(string: "tel://1\( number)")!
+        var url:NSURL = NSURL(string: "tel://1\( NSUserDefaults.standardUserDefaults().integerForKey('phoneNumber'))")!
         UIApplication.sharedApplication().openURL(url)
     }
 
