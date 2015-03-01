@@ -15,7 +15,10 @@ class FoodMapViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        
+        foodMap.showsUserLocation = true
+        let lc = LocationController()
+        while(DinerChoices.placeChoice == nil){}
+        addResteraunt(lc.getLocation(),  endPoint: DinerChoices.placeChoice)
     }
     
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
@@ -59,9 +62,14 @@ class FoodMapViewController : UIViewController {
         }
     }
     
-    func addResteraunt(beginPoint: MKMapItem, endPoint: MKMapItem){
-        addNewRoute(beginPoint,destination: endPoint)
+    func addResteraunt(beginPoint: CLLocation, endPoint: MKMapItem){
+        let beginplacemark = MKPlacemark( coordinate: beginPoint.coordinate, addressDictionary: nil)
+        let beginItem = MKMapItem(placemark: beginplacemark)
+        addNewRoute(beginItem,destination: endPoint)
         //foodMap.addAnnotation(endPoint)
+        let endplacemark = endPoint.placemark!
+        foodMap.addAnnotation(endplacemark)
+        
     }
     
 }

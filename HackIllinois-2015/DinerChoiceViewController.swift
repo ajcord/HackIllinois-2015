@@ -18,7 +18,9 @@ class DinerChoiceViewController : UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        //Get the choices
+        //Get the choices'
+        while(DinerChoices.typeChoice == nil){ }
+        println("Diner choice is \(DinerChoices.typeChoice)")
         if DinerChoices.typeChoice == "burger" {
             choices = DinerChoices.burgersPlaces
         } else if DinerChoices.typeChoice == "taco" {
@@ -27,7 +29,7 @@ class DinerChoiceViewController : UIViewController {
             choices = DinerChoices.pizzaPlaces
         }
         println("viewDidLoad: \(choices)")
-        
+        println("Diner choice is \(DinerChoices.typeChoice)")
         for i in 0...(locationButtons.count - 1) {
             var button = locationButtons[i]
             button.setTitle(choices[i].name, forState: UIControlState.Normal)
