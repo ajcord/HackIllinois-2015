@@ -21,7 +21,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omJ-1L-oir">
                                 <rect key="frame" x="16" y="72" width="568" height="520"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Our goal: To make traveling alone on those late nights a little bit safer, and to ensure that our users make it home. 
+                                <string key="text">Our goal: To make traveling alone on those late nights a little bit safer, and to ensure that our users make it home. 
 
 This app intends to aid, not harm users. We accept no responsibility for any actions, damages, or harm done via the usage of this app.
 
@@ -46,7 +46,7 @@ www.github.com/danielcarballal
 
 Paul Gibbons, UIUC
 www.github.com/pualtgibbons
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -204,17 +204,8 @@ www.github.com/pualtgibbons
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtI-H5-0bk">
-                                <rect key="frame" x="272" y="264" width="57" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="##########" minimumFontSize="12" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="DpY-Se-lTw">
                                 <rect key="frame" x="16" y="174" width="568" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="568" id="fs9-Yl-PrR"/>
-                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -223,7 +214,7 @@ www.github.com/pualtgibbons
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend's Phone Number: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pim-bN-CIC">
-                                <rect key="frame" x="191" y="142" width="220" height="24"/>
+                                <rect key="frame" x="190" y="142" width="220" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -237,70 +228,35 @@ www.github.com/pualtgibbons
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wts-dE-CQH">
                                 <rect key="frame" x="276" y="549" width="51" height="31"/>
                                 <connections>
-                                    <action selector="hardSwitch" destination="onF-7y-YZP" eventType="valueChanged" id="1AT-61-u2e"/>
+                                    <action selector="specialSettingsSwitched:" destination="onF-7y-YZP" eventType="valueChanged" id="RRc-9F-FAg"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtI-H5-0bk">
+                                <rect key="frame" x="272" y="288" width="57" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Nsv-ek-BaM" secondAttribute="centerX" id="1Ke-mg-Rsf"/>
-                            <constraint firstItem="DpY-Se-lTw" firstAttribute="top" secondItem="Pim-bN-CIC" secondAttribute="bottom" constant="30" id="1nr-qZ-AAk"/>
-                            <constraint firstItem="Pim-bN-CIC" firstAttribute="top" secondItem="Nsv-ek-BaM" secondAttribute="bottom" constant="8" id="3Hm-9A-aL8"/>
-                            <constraint firstItem="Pim-bN-CIC" firstAttribute="top" secondItem="rtI-H5-0bk" secondAttribute="bottom" constant="60" id="5OK-US-sFb"/>
-                            <constraint firstItem="6Ga-E2-NKA" firstAttribute="top" secondItem="Pqx-JD-Dyw" secondAttribute="bottom" constant="20" id="6YS-dO-45x"/>
-                            <constraint firstItem="wts-dE-CQH" firstAttribute="centerX" secondItem="Pcy-UK-rAB" secondAttribute="centerX" constant="0.5" id="6rH-Ji-HXh"/>
-                            <constraint firstItem="DpY-Se-lTw" firstAttribute="leading" secondItem="iGe-ab-bDl" secondAttribute="leadingMargin" id="Cz7-B8-eMQ"/>
-                            <constraint firstItem="Pcy-UK-rAB" firstAttribute="centerX" secondItem="Pqx-JD-Dyw" secondAttribute="centerX" id="ECx-Zn-ZJX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Pim-bN-CIC" secondAttribute="trailing" constant="191" id="EOY-nP-Rdi"/>
-                            <constraint firstItem="rtI-H5-0bk" firstAttribute="top" secondItem="DpY-Se-lTw" secondAttribute="bottom" constant="60" id="EoZ-2B-jB0"/>
-                            <constraint firstItem="DpY-Se-lTw" firstAttribute="top" secondItem="Pim-bN-CIC" secondAttribute="bottom" constant="8" id="GHk-0Z-kP6"/>
-                            <constraint firstItem="DpY-Se-lTw" firstAttribute="trailing" secondItem="iGe-ab-bDl" secondAttribute="trailingMargin" id="GT9-fK-PRH"/>
-                            <constraint firstItem="Nsv-ek-BaM" firstAttribute="leading" secondItem="iGe-ab-bDl" secondAttribute="leadingMargin" id="JKs-9r-KCZ"/>
-                            <constraint firstAttribute="centerX" secondItem="rtI-H5-0bk" secondAttribute="centerX" id="KB8-QW-ox1"/>
-                            <constraint firstItem="wts-dE-CQH" firstAttribute="top" secondItem="Pqx-JD-Dyw" secondAttribute="bottom" constant="20" id="Kkj-FC-HTY"/>
-                            <constraint firstItem="Pcy-UK-rAB" firstAttribute="top" secondItem="xYS-Pm-Ecs" secondAttribute="bottom" constant="8" id="Ld0-6z-nbe"/>
-                            <constraint firstItem="Pim-bN-CIC" firstAttribute="leading" secondItem="iGe-ab-bDl" secondAttribute="leadingMargin" constant="192" id="NqX-wW-jtR"/>
-                            <constraint firstItem="Nsv-ek-BaM" firstAttribute="trailing" secondItem="iGe-ab-bDl" secondAttribute="trailingMargin" id="RPs-zf-boU"/>
-                            <constraint firstItem="Pim-bN-CIC" firstAttribute="top" secondItem="Nsv-ek-BaM" secondAttribute="bottom" constant="8" id="SyK-hQ-wCQ"/>
-                            <constraint firstItem="Pim-bN-CIC" firstAttribute="centerX" secondItem="Pcy-UK-rAB" secondAttribute="centerX" constant="0.5" id="Tog-nl-MXj"/>
-                            <constraint firstItem="DpY-Se-lTw" firstAttribute="top" secondItem="Pim-bN-CIC" secondAttribute="bottom" constant="30" id="UHN-PZ-feF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rtI-H5-0bk" secondAttribute="trailing" constant="255" id="VSu-n4-gBd"/>
-                            <constraint firstItem="Pim-bN-CIC" firstAttribute="leading" secondItem="iGe-ab-bDl" secondAttribute="leadingMargin" constant="192" id="XbR-VP-a0f"/>
-                            <constraint firstItem="rtI-H5-0bk" firstAttribute="leading" secondItem="iGe-ab-bDl" secondAttribute="leadingMargin" constant="256" id="YWY-qF-egu"/>
-                            <constraint firstItem="DpY-Se-lTw" firstAttribute="trailing" secondItem="iGe-ab-bDl" secondAttribute="trailingMargin" id="ZMl-jE-zuZ"/>
-                            <constraint firstItem="DpY-Se-lTw" firstAttribute="leading" secondItem="iGe-ab-bDl" secondAttribute="leadingMargin" id="bNe-LN-VOW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rtI-H5-0bk" secondAttribute="trailing" constant="255" id="bsY-dg-9O8"/>
-                            <constraint firstAttribute="centerX" secondItem="Pcy-UK-rAB" secondAttribute="centerX" id="c4d-8F-hKv"/>
-                            <constraint firstItem="rtI-H5-0bk" firstAttribute="top" secondItem="DpY-Se-lTw" secondAttribute="bottom" constant="84" id="czX-BU-aDQ"/>
-                            <constraint firstItem="Pim-bN-CIC" firstAttribute="top" secondItem="rtI-H5-0bk" secondAttribute="bottom" constant="60" id="i4g-sC-tff"/>
-                            <constraint firstItem="rtI-H5-0bk" firstAttribute="top" secondItem="Nsv-ek-BaM" secondAttribute="bottom" constant="40" id="l1p-Jq-aom"/>
-                            <constraint firstItem="Nsv-ek-BaM" firstAttribute="top" secondItem="Pcy-UK-rAB" secondAttribute="bottom" constant="8" id="lFy-fs-MI9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Pim-bN-CIC" secondAttribute="trailing" constant="191" id="mD3-mJ-q9U"/>
-                            <constraint firstItem="Pim-bN-CIC" firstAttribute="top" secondItem="Nsv-ek-BaM" secondAttribute="bottom" constant="152" id="smA-P3-ClF"/>
-                            <constraint firstItem="rtI-H5-0bk" firstAttribute="leading" secondItem="iGe-ab-bDl" secondAttribute="leadingMargin" constant="256" id="tPm-4G-8eC"/>
-                            <constraint firstItem="6Ga-E2-NKA" firstAttribute="top" secondItem="wts-dE-CQH" secondAttribute="bottom" constant="20" id="vVb-8w-oPe"/>
-                            <constraint firstItem="rtI-H5-0bk" firstAttribute="centerX" secondItem="Pcy-UK-rAB" secondAttribute="centerX" constant="0.5" id="zJi-bC-7Di"/>
+                            <constraint firstAttribute="centerX" secondItem="rtI-H5-0bk" secondAttribute="centerX" id="0oY-rw-2OM"/>
+                            <constraint firstItem="Nsv-ek-BaM" firstAttribute="leading" secondItem="iGe-ab-bDl" secondAttribute="leadingMargin" id="2B5-Fy-enc"/>
+                            <constraint firstItem="DpY-Se-lTw" firstAttribute="leading" secondItem="iGe-ab-bDl" secondAttribute="leadingMargin" id="3B7-As-zkK"/>
+                            <constraint firstAttribute="centerY" secondItem="rtI-H5-0bk" secondAttribute="centerY" id="4oF-6S-2XC"/>
+                            <constraint firstAttribute="centerX" secondItem="Pim-bN-CIC" secondAttribute="centerX" id="BDb-Ig-OD7"/>
+                            <constraint firstItem="Nsv-ek-BaM" firstAttribute="trailing" secondItem="iGe-ab-bDl" secondAttribute="trailingMargin" id="BHS-6C-PqI"/>
+                            <constraint firstItem="Pcy-UK-rAB" firstAttribute="top" secondItem="xYS-Pm-Ecs" secondAttribute="bottom" constant="8" id="Dqs-q9-1jZ"/>
+                            <constraint firstItem="DpY-Se-lTw" firstAttribute="top" secondItem="Pim-bN-CIC" secondAttribute="bottom" constant="8" id="MvA-Co-xpA"/>
+                            <constraint firstAttribute="centerX" secondItem="wts-dE-CQH" secondAttribute="centerX" id="SKI-mS-5Y4"/>
+                            <constraint firstItem="wts-dE-CQH" firstAttribute="top" secondItem="Pqx-JD-Dyw" secondAttribute="bottom" constant="20" id="VB8-0U-TKg"/>
+                            <constraint firstAttribute="centerX" secondItem="Pcy-UK-rAB" secondAttribute="centerX" id="bN4-LI-ZcN"/>
+                            <constraint firstItem="Pim-bN-CIC" firstAttribute="top" secondItem="Nsv-ek-BaM" secondAttribute="bottom" constant="8" id="eI3-QR-Vrt"/>
+                            <constraint firstItem="Nsv-ek-BaM" firstAttribute="top" secondItem="Pcy-UK-rAB" secondAttribute="bottom" constant="8" id="kei-Wn-zre"/>
+                            <constraint firstItem="6Ga-E2-NKA" firstAttribute="top" secondItem="wts-dE-CQH" secondAttribute="bottom" constant="20" id="lKb-oY-blP"/>
+                            <constraint firstItem="DpY-Se-lTw" firstAttribute="trailing" secondItem="iGe-ab-bDl" secondAttribute="trailingMargin" id="rgh-rr-8DP"/>
+                            <constraint firstAttribute="centerX" secondItem="Pqx-JD-Dyw" secondAttribute="centerX" id="vlj-Lu-dsb"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="1nr-qZ-AAk"/>
-                                <exclude reference="UHN-PZ-feF"/>
-                                <exclude reference="5OK-US-sFb"/>
-                                <exclude reference="EOY-nP-Rdi"/>
-                                <exclude reference="NqX-wW-jtR"/>
-                                <exclude reference="XbR-VP-a0f"/>
-                                <exclude reference="i4g-sC-tff"/>
-                                <exclude reference="mD3-mJ-q9U"/>
-                                <exclude reference="smA-P3-ClF"/>
-                                <exclude reference="VSu-n4-gBd"/>
-                                <exclude reference="YWY-qF-egu"/>
-                                <exclude reference="bsY-dg-9O8"/>
-                                <exclude reference="czX-BU-aDQ"/>
-                                <exclude reference="l1p-Jq-aom"/>
-                                <exclude reference="tPm-4G-8eC"/>
-                                <exclude reference="6YS-dO-45x"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="07A-19-9aG">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Hlg-ip-QDs"/>
@@ -315,6 +271,7 @@ www.github.com/pualtgibbons
                         <outlet property="addressStatusLabel" destination="rtI-H5-0bk" id="eis-CT-bgZ"/>
                         <outlet property="addressTextField" destination="Nsv-ek-BaM" id="iAe-GF-as0"/>
                         <outlet property="numberTextField" destination="DpY-Se-lTw" id="vAJ-R1-Ibi"/>
+                        <outlet property="phoneNumberLabel" destination="Pim-bN-CIC" id="6O8-7S-ztg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGW-V4-Sbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
