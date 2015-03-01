@@ -27,7 +27,6 @@ class FoodViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         for button in foodSelectionButtons {
             //Disable all the buttons at first
             button.enabled = false

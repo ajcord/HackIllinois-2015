@@ -11,7 +11,7 @@ import MapKit
 
 class FoodMapViewController : UIViewController {
     
-    @IBOutlet weak var foodMap: MapsController!
+    @IBOutlet weak var foodMap: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -23,7 +23,6 @@ class FoodMapViewController : UIViewController {
     
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
         if overlay is MKPolyline{
-            println(overlay.title)
             var polylineRenderer = MKPolylineRenderer(overlay: overlay)
             if(overlay.title == "Walk"){
                 polylineRenderer.strokeColor = UIColor.blueColor()
@@ -56,9 +55,6 @@ class FoodMapViewController : UIViewController {
     func showRoute(response: MKDirectionsResponse){
         for route in response.routes as [MKRoute]{
             foodMap.addOverlay(route.polyline,level:MKOverlayLevel.AboveRoads)
-            // for step in route.steps{
-            //   println(step.instructions)
-            //}
         }
     }
     

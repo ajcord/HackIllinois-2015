@@ -28,7 +28,6 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated);
         self.loadSettings()
         addressStatusLabel.hidden = true;
-        println(NSUserDefaults.standardUserDefaults().boolForKey("specialSettings"))
         if (!NSUserDefaults.standardUserDefaults().boolForKey("specialSettings"))
         {//if special settings are disabled, hide phone number field
             numberTextField.hidden = true;
@@ -73,7 +72,6 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
             numberTextField.hidden = false
             phoneNumberLabel.hidden = false
         }
-    println(NSUserDefaults.standardUserDefaults().boolForKey("specialSettings"))
     }
     
     func specialSettingsExist()->Bool{
@@ -180,7 +178,6 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
                 }
             } else {
                 self.addressStatusLabel.text = "Address not found!";
-                println(error)
             }
             self.addressStatusLabel.hidden = false
         }

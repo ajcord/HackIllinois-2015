@@ -19,7 +19,6 @@
 		BC9E86371AA21F9A000B8E3D /* FoodMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E86361AA21F9A000B8E3D /* FoodMapViewController.swift */; };
 		BC9E86391AA21FBF000B8E3D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E86381AA21FBF000B8E3D /* SettingsViewController.swift */; };
 		BC9E863B1AA21FED000B8E3D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E863A1AA21FED000B8E3D /* InfoViewController.swift */; };
-		BC9E863D1AA22068000B8E3D /* MapsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E863C1AA22068000B8E3D /* MapsController.swift */; };
 		BCD3D9F81AA2ACB1000C4A7E /* DinerChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3D9F51AA2ACB1000C4A7E /* DinerChoices.swift */; };
 		BCD3D9F91AA2ACB1000C4A7E /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3D9F61AA2ACB1000C4A7E /* LocationController.swift */; };
 		FA3694811AA0E6AF00C18BBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3694801AA0E6AF00C18BBF /* AppDelegate.swift */; };
@@ -50,7 +49,6 @@
 		BC9E86361AA21F9A000B8E3D /* FoodMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMapViewController.swift; sourceTree = "<group>"; };
 		BC9E86381AA21FBF000B8E3D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BC9E863A1AA21FED000B8E3D /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		BC9E863C1AA22068000B8E3D /* MapsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsController.swift; sourceTree = "<group>"; };
 		BCD3D9F51AA2ACB1000C4A7E /* DinerChoices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerChoices.swift; sourceTree = "<group>"; };
 		BCD3D9F61AA2ACB1000C4A7E /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		FA36947B1AA0E6AF00C18BBF /* Buzzed Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buzzed Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +90,6 @@
 				BC9E86361AA21F9A000B8E3D /* FoodMapViewController.swift */,
 				BC9E86381AA21FBF000B8E3D /* SettingsViewController.swift */,
 				BC9E863A1AA21FED000B8E3D /* InfoViewController.swift */,
-				BC9E863C1AA22068000B8E3D /* MapsController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -282,7 +279,6 @@
 				BC86BB821AA2BBBD0008AB0A /* SettingsKey.swift in Sources */,
 				BCD3D9F91AA2ACB1000C4A7E /* LocationController.swift in Sources */,
 				BC9E86351AA21F63000B8E3D /* DinerChoiceViewController.swift in Sources */,
-				BC9E863D1AA22068000B8E3D /* MapsController.swift in Sources */,
 				BCD3D9F81AA2ACB1000C4A7E /* DinerChoices.swift in Sources */,
 				BC9E86331AA21EFC000B8E3D /* FoodViewController.swift in Sources */,
 				BC9E863B1AA21FED000B8E3D /* InfoViewController.swift in Sources */,

@@ -33,16 +33,8 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
             self.presentViewController(alert, animated: true, completion: nil)
             
             return
-            
         }
         parseJSONDict(jsonDict)
-
-        
-        println("View did load \(directions)")
-        //fatalError("init(coder:) has not been implemented")
-        //mapView(this,
-        
-        
     }
     
     func concatanateStringArray(array: [String]) -> String{
@@ -58,7 +50,6 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
     
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
         if overlay is MKPolyline{
-           // println(overlay.title)
             var polylineRenderer = MKPolylineRenderer(overlay: overlay)
             if(overlay.title == "Walk"){
                 polylineRenderer.strokeColor = UIColor.blueColor()
@@ -106,7 +97,6 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
             if(isWalk){
                 
                 for step in route.steps{
-                    println("Walking directions" + step.instructions)
                     directions[index] += step.instructions + "\n" //.append(step.instructions)
                 }
             }
@@ -114,10 +104,8 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
         }
         
         if index == directions.count-1 {
-           // println("Done: \(directions)")
             navigatorText.text = concatanateStringArray(directions)
         }
-        
     }
     
     func parseJSONDict(jsonDict:NSDictionary){
@@ -125,8 +113,6 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
         let itineraries = jsonDict["itineraries"] as NSArray
         let itinleg = itineraries[0] as NSDictionary
         let legs =  itinleg["legs"] as NSArray
-        //println(jsonDict)
-        //println(itineraries)
         println(legs)
         for leg in legs {
             println("Leg \(leg)")
@@ -137,9 +123,7 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
                 let end = (leg["walk"] as NSDictionary)["end"] as NSDictionary
                 
                 let beginlocation = CLLocationCoordinate2D(latitude: begin["lat"] as CLLocationDegrees, longitude: begin["lon"] as CLLocationDegrees)
-                //CLLocationCoordinate2D(latitude: <#CLLocationDegrees#>, longitude: <#CLLocationDegrees#>)
                 let endlocation = CLLocationCoordinate2D(latitude: end["lat"] as CLLocationDegrees, longitude: end["lon"] as CLLocationDegrees)
-                //MKPlacemark(coordinate: <#CLLocationCoordinate2D#>, addressDictionary: <#[NSObject : AnyObject]!#>)
                 let beginplacemark = MKPlacemark(coordinate: beginlocation, addressDictionary: nil)
                 let endplacemark = MKPlacemark(coordinate:endlocation, addressDictionary: nil)
                 let beginPoint = MKMapItem(placemark: beginplacemark)
@@ -147,43 +131,20 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
                 addNewRoute(beginPoint,destination: endPoint, color: "Walk",isWalk: true)
                 homeMapView.addAnnotation(endplacemark)
                 
-               /* let request = MKDirectionsRequest()
-                request.setSource(beginPoint)
-                request.setDestination(endPoint)
-                request.requestsAlternateRoutes = false
-                
-                let direct = MKDirections(request:request)
-                
-                direct.calculateDirectionsWithCompletionHandler({(response:MKDirectionsResponse!, error:NSError!) in
-                    if error != nil{
-                        //Handle error
-                    } else {
-                        //self.showRoute(response)
-                    }
-                })
-                directions.append(direct)*/
-                //CLLocationDegrees(Float)
-                //MKCoordinateSpan(latitudeDelta: <#CLLocationDegrees#>, longitudeDelta: <#CLLocationDegrees#>)
                 var deltaLon:CLLocationDegrees = CLLocationDegrees(0.05)
                 var deltaLat = CLLocationDegrees(0.05)
                 var span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: deltaLat, longitudeDelta: deltaLon)
                 var region:MKCoordinateRegion = MKCoordinateRegion(center: beginlocation, span: span)
                 homeMapView.setRegion(region,animated:true)
-                
-                
-                
             } else {
                 // service leg
-                
                 for _service in (leg["services"] as NSArray) {
                     let service = _service as NSDictionary
                     let begin = service["begin"] as NSDictionary
                     let end = service["end"] as NSDictionary
                     
                     let beginlocation = CLLocationCoordinate2D(latitude: begin["lat"] as CLLocationDegrees, longitude: begin["lon"] as CLLocationDegrees)
-                    //CLLocationCoordinate2D(latitude: <#CLLocationDegrees#>, longitude: <#CLLocationDegrees#>)
                     let endlocation = CLLocationCoordinate2D(latitude: end["lat"] as CLLocationDegrees, longitude: end["lon"] as CLLocationDegrees)
-                    //MKPlacemark(coordinate: <#CLLocationCoordinate2D#>, addressDictionary: <#[NSObject : AnyObject]!#>)
                     let beginplacemark = MKPlacemark(coordinate: beginlocation, addressDictionary: nil)
                     let endplacemark = MKPlacemark(coordinate:endlocation, addressDictionary: nil)
                     let beginPoint = MKMapItem(placemark: beginplacemark)
@@ -202,16 +163,8 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
                     var span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: deltaLat, longitudeDelta: deltaLon)
                     var region:MKCoordinateRegion = MKCoordinateRegion(center: beginlocation, span: span)
                     homeMapView.setRegion(region,animated:true)
-                    
                 }
-                
             }
-            println("Current directions \(directions)")
-            
         }
-        
-        //var num:Float = SettingsKeys.homeLat.toFloat()!//Should never get none number
-        
     }
-    
 }

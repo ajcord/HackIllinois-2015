@@ -21,7 +21,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omJ-1L-oir">
                                 <rect key="frame" x="16" y="72" width="568" height="520"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Our goal: To make traveling alone on those late nights a little bit safer, and to ensure that our users make it home. 
+                                <string key="text">Our goal: To make traveling alone on those late nights a little bit safer, and to ensure that our users make it home. 
 
 This app intends to aid, not harm users. We accept no responsibility for any actions, damages, or harm done via the usage of this app.
 
@@ -46,7 +46,7 @@ www.github.com/danielcarballal
 
 Paul Gibbons, UIUC
 www.github.com/paultgibbons
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -572,35 +572,21 @@ www.github.com/paultgibbons
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aHi-CQ-Wgu" customClass="MapsController" customModule="Buzzed_Buddy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="436"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aHi-CQ-Wgu">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </mapView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRg-Cz-ahW">
-                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="tlg-6d-7Wj"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="vtc-43-KFZ" firstAttribute="top" secondItem="aHi-CQ-Wgu" secondAttribute="bottom" id="BL8-WJ-y3p"/>
                             <constraint firstItem="aHi-CQ-Wgu" firstAttribute="top" secondItem="PhI-qJ-Gpc" secondAttribute="bottom" id="Q3b-1f-I3z"/>
-                            <constraint firstAttribute="trailing" secondItem="ZRg-Cz-ahW" secondAttribute="trailing" id="dV6-wy-MnV"/>
-                            <constraint firstItem="ZRg-Cz-ahW" firstAttribute="leading" secondItem="X2b-Ze-g9b" secondAttribute="leading" id="oTF-DY-djX"/>
-                            <constraint firstAttribute="bottom" secondItem="ZRg-Cz-ahW" secondAttribute="bottom" id="pBU-KR-8Oy"/>
-                            <constraint firstItem="ZRg-Cz-ahW" firstAttribute="top" secondItem="aHi-CQ-Wgu" secondAttribute="bottom" id="tIi-G6-sPf"/>
                             <constraint firstAttribute="trailing" secondItem="aHi-CQ-Wgu" secondAttribute="trailing" id="wX5-kn-BGt"/>
                             <constraint firstItem="aHi-CQ-Wgu" firstAttribute="leading" secondItem="X2b-Ze-g9b" secondAttribute="leading" id="wrp-mj-b4x"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="FOOD!" id="42S-Ih-8rl"/>
                     <connections>
-                        <outlet property="foodMap" destination="aHi-CQ-Wgu" id="RCn-fn-dId"/>
+                        <outlet property="foodMap" destination="aHi-CQ-Wgu" id="wW3-y9-ZQY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpD-Gc-39W" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -622,13 +608,12 @@ www.github.com/paultgibbons
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gO0-kw-6L9" customClass="MapsController" customModule="Buzzed_Buddy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="600" height="386"/>
                             </mapView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujA-xj-sye">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Directions loading..." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujA-xj-sye">
                                 <rect key="frame" x="0.0" y="450" width="600" height="150"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="FM4-SB-HtS"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -705,8 +690,8 @@ www.github.com/paultgibbons
         <image name="tacos_pressed" width="232" height="136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zRe-c5-Ywb"/>
         <segue reference="vzf-6h-tra"/>
+        <segue reference="mdx-r3-Zft"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
