@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:HackIllinois-2015.xcodeproj">
+      location = "self:Buzzed Buddy.xcodeproj">
    </FileRef>
 </Workspace>

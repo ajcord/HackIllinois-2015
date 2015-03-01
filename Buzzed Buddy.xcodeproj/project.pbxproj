@@ -10,20 +10,20 @@
 		BC027AA31AA195CC00DBE3AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC027AA21AA195CC00DBE3AF /* MapKit.framework */; };
 		BC027AA51AA21BBE00DBE3AF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC027AA41AA21BBE00DBE3AF /* CoreLocation.framework */; };
 		BC027AA71AA21E2300DBE3AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC027AA61AA21E2300DBE3AF /* HomeViewController.swift */; };
+		BC0650CE1AA2AFC4006F0E19 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0650CA1AA2AFC4006F0E19 /* LaunchScreen.xib */; };
+		BC0650CF1AA2AFC4006F0E19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0650CC1AA2AFC4006F0E19 /* Main.storyboard */; };
 		BC9E86331AA21EFC000B8E3D /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E86321AA21EFC000B8E3D /* FoodViewController.swift */; };
 		BC9E86351AA21F63000B8E3D /* DinerChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E86341AA21F63000B8E3D /* DinerChoiceViewController.swift */; };
 		BC9E86371AA21F9A000B8E3D /* FoodMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E86361AA21F9A000B8E3D /* FoodMapViewController.swift */; };
 		BC9E86391AA21FBF000B8E3D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E86381AA21FBF000B8E3D /* SettingsViewController.swift */; };
 		BC9E863B1AA21FED000B8E3D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E863A1AA21FED000B8E3D /* InfoViewController.swift */; };
 		BC9E863D1AA22068000B8E3D /* MapsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E863C1AA22068000B8E3D /* MapsController.swift */; };
+		BCD3D9F81AA2ACB1000C4A7E /* DinerChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3D9F51AA2ACB1000C4A7E /* DinerChoices.swift */; };
+		BCD3D9F91AA2ACB1000C4A7E /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3D9F61AA2ACB1000C4A7E /* LocationController.swift */; };
+		BCD3D9FA1AA2ACB1000C4A7E /* SettingsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3D9F71AA2ACB1000C4A7E /* SettingsKey.swift */; };
 		FA3694811AA0E6AF00C18BBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3694801AA0E6AF00C18BBF /* AppDelegate.swift */; };
 		FA3694831AA0E6AF00C18BBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3694821AA0E6AF00C18BBF /* ViewController.swift */; };
-		FA3694861AA0E6AF00C18BBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3694841AA0E6AF00C18BBF /* Main.storyboard */; };
 		FA3694881AA0E6AF00C18BBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3694871AA0E6AF00C18BBF /* Images.xcassets */; };
-		FA36948B1AA0E6AF00C18BBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3694891AA0E6AF00C18BBF /* LaunchScreen.xib */; };
-		FA3694971AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3694961AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift */; };
-		FA519E0C1AA291E40091F270 /* DinerChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA519E0B1AA291E40091F270 /* DinerChoices.swift */; };
-		FAFA1FB51AA2451F00CCF43D /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA1FB41AA2451F00CCF43D /* LocationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,24 +40,24 @@
 		BC027AA21AA195CC00DBE3AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BC027AA41AA21BBE00DBE3AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BC027AA61AA21E2300DBE3AF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BC0650CB1AA2AFC4006F0E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "HackIllinois-2015/Base.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
+		BC0650CD1AA2AFC4006F0E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "HackIllinois-2015/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		BC9E86321AA21EFC000B8E3D /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		BC9E86341AA21F63000B8E3D /* DinerChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerChoiceViewController.swift; sourceTree = "<group>"; };
 		BC9E86361AA21F9A000B8E3D /* FoodMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMapViewController.swift; sourceTree = "<group>"; };
 		BC9E86381AA21FBF000B8E3D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BC9E863A1AA21FED000B8E3D /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		BC9E863C1AA22068000B8E3D /* MapsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsController.swift; sourceTree = "<group>"; };
-		FA36947B1AA0E6AF00C18BBF /* HackIllinois-2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HackIllinois-2015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD3D9F51AA2ACB1000C4A7E /* DinerChoices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerChoices.swift; sourceTree = "<group>"; };
+		BCD3D9F61AA2ACB1000C4A7E /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		BCD3D9F71AA2ACB1000C4A7E /* SettingsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsKey.swift; sourceTree = "<group>"; };
+		FA36947B1AA0E6AF00C18BBF /* Buzzed Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buzzed Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA36947F1AA0E6AF00C18BBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3694801AA0E6AF00C18BBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA3694821AA0E6AF00C18BBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FA3694851AA0E6AF00C18BBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA3694871AA0E6AF00C18BBF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FA36948A1AA0E6AF00C18BBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		FA3694901AA0E6AF00C18BBF /* HackIllinois-2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HackIllinois-2015Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3694901AA0E6AF00C18BBF /* Buzzed BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Buzzed BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3694951AA0E6AF00C18BBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA3694961AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackIllinois_2015Tests.swift; sourceTree = "<group>"; };
-		FA519E0B1AA291E40091F270 /* DinerChoices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerChoices.swift; sourceTree = "<group>"; };
-		FAFA1FB41AA2451F00CCF43D /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,13 +95,23 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		BCD3D9F41AA2ACB1000C4A7E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCD3D9F51AA2ACB1000C4A7E /* DinerChoices.swift */,
+				BCD3D9F61AA2ACB1000C4A7E /* LocationController.swift */,
+				BCD3D9F71AA2ACB1000C4A7E /* SettingsKey.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FA3694721AA0E6AF00C18BBF = {
 			isa = PBXGroup;
 			children = (
 				BC027AA41AA21BBE00DBE3AF /* CoreLocation.framework */,
 				BC027AA21AA195CC00DBE3AF /* MapKit.framework */,
-				FA36947D1AA0E6AF00C18BBF /* HackIllinois-2015 */,
-				FA3694931AA0E6AF00C18BBF /* HackIllinois-2015Tests */,
+				FA36947D1AA0E6AF00C18BBF /* Buzzed-Buddy */,
+				FA3694931AA0E6AF00C18BBF /* Buzzed-BuddyTests */,
 				FA36947C1AA0E6AF00C18BBF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,23 +119,24 @@
 		FA36947C1AA0E6AF00C18BBF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA36947B1AA0E6AF00C18BBF /* HackIllinois-2015.app */,
-				FA3694901AA0E6AF00C18BBF /* HackIllinois-2015Tests.xctest */,
+				FA36947B1AA0E6AF00C18BBF /* Buzzed Buddy.app */,
+				FA3694901AA0E6AF00C18BBF /* Buzzed BuddyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA36947D1AA0E6AF00C18BBF /* HackIllinois-2015 */ = {
+		FA36947D1AA0E6AF00C18BBF /* Buzzed-Buddy */ = {
 			isa = PBXGroup;
 			children = (
-				FAFA1FB31AA2451F00CCF43D /* Model */,
+				BC0650CA1AA2AFC4006F0E19 /* LaunchScreen.xib */,
+				BC0650CC1AA2AFC4006F0E19 /* Main.storyboard */,
+				BCD3D9F41AA2ACB1000C4A7E /* Model */,
 				FA3694801AA0E6AF00C18BBF /* AppDelegate.swift */,
 				BC9E86311AA21E99000B8E3D /* ViewControllers */,
-				FA3694841AA0E6AF00C18BBF /* Main.storyboard */,
 				FA3694871AA0E6AF00C18BBF /* Images.xcassets */,
-				FA3694891AA0E6AF00C18BBF /* LaunchScreen.xib */,
 				FA36947E1AA0E6AF00C18BBF /* Supporting Files */,
 			);
+			name = "Buzzed-Buddy";
 			path = "HackIllinois-2015";
 			sourceTree = "<group>";
 		};
@@ -137,12 +148,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FA3694931AA0E6AF00C18BBF /* HackIllinois-2015Tests */ = {
+		FA3694931AA0E6AF00C18BBF /* Buzzed-BuddyTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA3694961AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift */,
 				FA3694941AA0E6AF00C18BBF /* Supporting Files */,
 			);
+			name = "Buzzed-BuddyTests";
 			path = "HackIllinois-2015Tests";
 			sourceTree = "<group>";
 		};
@@ -154,21 +165,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FAFA1FB31AA2451F00CCF43D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				FAFA1FB41AA2451F00CCF43D /* LocationController.swift */,
-				FA519E0B1AA291E40091F270 /* DinerChoices.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA36947A1AA0E6AF00C18BBF /* HackIllinois-2015 */ = {
+		FA36947A1AA0E6AF00C18BBF /* Buzzed Buddy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA36949A1AA0E6AF00C18BBF /* Build configuration list for PBXNativeTarget "HackIllinois-2015" */;
+			buildConfigurationList = FA36949A1AA0E6AF00C18BBF /* Build configuration list for PBXNativeTarget "Buzzed Buddy" */;
 			buildPhases = (
 				FA3694771AA0E6AF00C18BBF /* Sources */,
 				FA3694781AA0E6AF00C18BBF /* Frameworks */,
@@ -178,14 +180,14 @@
 			);
 			dependencies = (
 			);
-			name = "HackIllinois-2015";
+			name = "Buzzed Buddy";
 			productName = "HackIllinois-2015";
-			productReference = FA36947B1AA0E6AF00C18BBF /* HackIllinois-2015.app */;
+			productReference = FA36947B1AA0E6AF00C18BBF /* Buzzed Buddy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FA36948F1AA0E6AF00C18BBF /* HackIllinois-2015Tests */ = {
+		FA36948F1AA0E6AF00C18BBF /* Buzzed BuddyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA36949D1AA0E6AF00C18BBF /* Build configuration list for PBXNativeTarget "HackIllinois-2015Tests" */;
+			buildConfigurationList = FA36949D1AA0E6AF00C18BBF /* Build configuration list for PBXNativeTarget "Buzzed BuddyTests" */;
 			buildPhases = (
 				FA36948C1AA0E6AF00C18BBF /* Sources */,
 				FA36948D1AA0E6AF00C18BBF /* Frameworks */,
@@ -196,9 +198,9 @@
 			dependencies = (
 				FA3694921AA0E6AF00C18BBF /* PBXTargetDependency */,
 			);
-			name = "HackIllinois-2015Tests";
+			name = "Buzzed BuddyTests";
 			productName = "HackIllinois-2015Tests";
-			productReference = FA3694901AA0E6AF00C18BBF /* HackIllinois-2015Tests.xctest */;
+			productReference = FA3694901AA0E6AF00C18BBF /* Buzzed BuddyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -225,7 +227,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FA3694761AA0E6AF00C18BBF /* Build configuration list for PBXProject "HackIllinois-2015" */;
+			buildConfigurationList = FA3694761AA0E6AF00C18BBF /* Build configuration list for PBXProject "Buzzed Buddy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -238,8 +240,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA36947A1AA0E6AF00C18BBF /* HackIllinois-2015 */,
-				FA36948F1AA0E6AF00C18BBF /* HackIllinois-2015Tests */,
+				FA36947A1AA0E6AF00C18BBF /* Buzzed Buddy */,
+				FA36948F1AA0E6AF00C18BBF /* Buzzed BuddyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -249,8 +251,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA3694861AA0E6AF00C18BBF /* Main.storyboard in Resources */,
-				FA36948B1AA0E6AF00C18BBF /* LaunchScreen.xib in Resources */,
+				BC0650CF1AA2AFC4006F0E19 /* Main.storyboard in Resources */,
+				BC0650CE1AA2AFC4006F0E19 /* LaunchScreen.xib in Resources */,
 				FA3694881AA0E6AF00C18BBF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,12 +275,13 @@
 				BC9E86371AA21F9A000B8E3D /* FoodMapViewController.swift in Sources */,
 				BC9E86391AA21FBF000B8E3D /* SettingsViewController.swift in Sources */,
 				FA3694811AA0E6AF00C18BBF /* AppDelegate.swift in Sources */,
+				BCD3D9F91AA2ACB1000C4A7E /* LocationController.swift in Sources */,
+				BCD3D9FA1AA2ACB1000C4A7E /* SettingsKey.swift in Sources */,
 				BC9E86351AA21F63000B8E3D /* DinerChoiceViewController.swift in Sources */,
 				BC9E863D1AA22068000B8E3D /* MapsController.swift in Sources */,
-				FA519E0C1AA291E40091F270 /* DinerChoices.swift in Sources */,
+				BCD3D9F81AA2ACB1000C4A7E /* DinerChoices.swift in Sources */,
 				BC9E86331AA21EFC000B8E3D /* FoodViewController.swift in Sources */,
 				BC9E863B1AA21FED000B8E3D /* InfoViewController.swift in Sources */,
-				FAFA1FB51AA2451F00CCF43D /* LocationController.swift in Sources */,
 				BC027AA71AA21E2300DBE3AF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +290,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA3694971AA0E6AF00C18BBF /* HackIllinois_2015Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,26 +298,28 @@
 /* Begin PBXTargetDependency section */
 		FA3694921AA0E6AF00C18BBF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FA36947A1AA0E6AF00C18BBF /* HackIllinois-2015 */;
+			target = FA36947A1AA0E6AF00C18BBF /* Buzzed Buddy */;
 			targetProxy = FA3694911AA0E6AF00C18BBF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FA3694841AA0E6AF00C18BBF /* Main.storyboard */ = {
+		BC0650CA1AA2AFC4006F0E19 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FA3694851AA0E6AF00C18BBF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FA3694891AA0E6AF00C18BBF /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA36948A1AA0E6AF00C18BBF /* Base */,
+				BC0650CB1AA2AFC4006F0E19 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		BC0650CC1AA2AFC4006F0E19 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC0650CD1AA2AFC4006F0E19 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -407,7 +411,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "HackIllinois-2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Buzzed Buddy";
 			};
 			name = Debug;
 		};
@@ -415,10 +419,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "HackIllinois-2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Buzzed Buddy";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
 		};
@@ -436,7 +442,7 @@
 				);
 				INFOPLIST_FILE = "HackIllinois-2015Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Buzzed BuddyTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackIllinois-2015.app/HackIllinois-2015";
 			};
 			name = Debug;
@@ -451,7 +457,7 @@
 				);
 				INFOPLIST_FILE = "HackIllinois-2015Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Buzzed BuddyTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackIllinois-2015.app/HackIllinois-2015";
 			};
 			name = Release;
@@ -459,7 +465,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA3694761AA0E6AF00C18BBF /* Build configuration list for PBXProject "HackIllinois-2015" */ = {
+		FA3694761AA0E6AF00C18BBF /* Build configuration list for PBXProject "Buzzed Buddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA3694981AA0E6AF00C18BBF /* Debug */,
@@ -468,7 +474,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA36949A1AA0E6AF00C18BBF /* Build configuration list for PBXNativeTarget "HackIllinois-2015" */ = {
+		FA36949A1AA0E6AF00C18BBF /* Build configuration list for PBXNativeTarget "Buzzed Buddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA36949B1AA0E6AF00C18BBF /* Debug */,
@@ -477,7 +483,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA36949D1AA0E6AF00C18BBF /* Build configuration list for PBXNativeTarget "HackIllinois-2015Tests" */ = {
+		FA36949D1AA0E6AF00C18BBF /* Build configuration list for PBXNativeTarget "Buzzed BuddyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA36949E1AA0E6AF00C18BBF /* Debug */,
