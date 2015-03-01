@@ -39,28 +39,6 @@ class FoodViewController : UIViewController {
         doSearch("pizza")
     }
     
-//    override func viewWillAppear(animated: Bool) {
-//        super.viewWillAppear(animated)
-//        
-//        for button in foodSelectionButtons {
-//            //Disable all the buttons at first
-//            button.enabled = false
-//        }
-//    }
-    
-//    override func viewWillDisappear(animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        
-//        //Wait for searches to complete
-//        println("Waiting on diner choices...")
-//        while DinerChoices.burgersPlaces.isEmpty ||
-//            DinerChoices.tacosPlaces.isEmpty ||
-//            DinerChoices.pizzaPlaces.isEmpty {
-//                println("Looping")
-//        }
-//        println("Done waiting for diner choices")
-//    }
-    
     @IBAction func bugerButtonClick(sender: UIButton) {
         DinerChoices.typeChoice = "burger"
     }
