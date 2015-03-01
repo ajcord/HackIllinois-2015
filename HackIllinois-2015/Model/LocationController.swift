@@ -13,14 +13,13 @@ public class LocationController {
     var mostRecentLocation: CLLocation!
     init() {
         if CLLocationManager.locationServicesEnabled() {
-            println("Location services enabled")
             locationManager = CLLocationManager()
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.distanceFilter = kCLDistanceFilterNone
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
         } else {
-            println("Location services disabled")
+            // Location services disabled
         }
     }
     
@@ -39,10 +38,8 @@ public class LocationController {
         }
         
         //Wait for a location
-        println("Waiting for location...")
         var i = 0
-        while locationManager.location == nil { } 
-        println("Got location: \(locationManager.location)")
+        while locationManager.location == nil { }
         
         mostRecentLocation = locationManager.location
         return mostRecentLocation
