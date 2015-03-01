@@ -13,6 +13,16 @@ class FoodViewController : UIViewController {
     
     var locationController: LocationController!
     
+    enum Weekdays: Int {
+        case Sunday = 1
+        case Monday
+        case Tuesday
+        case Wednesday
+        case Thursday
+        case Friday
+        case Saturday
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -35,7 +45,141 @@ class FoodViewController : UIViewController {
     }
     
     @IBAction func crackedButtonClick(sender: UIButton) {
+        //Figure out where the trucks are
+        let currentLocation = locationController.getLocation()
+        let billMurrayCoords = getBillMurrayCoords()?
+        let ronSwansonCoords = getRonSwansonCoords()?
         
+        var billMurrayPlacemark: MKPlacemark?
+        var ronSwansonPlacemark: MKPlacemark?
+        var billMurray: MKMapItem?
+        var ronSwanson: MKMapItem?
+        if billMurrayCoords != nil {
+            billMurrayPlacemark = MKPlacemark(
+                coordinate: billMurrayCoords!,
+                addressDictionary: nil)
+            billMurray = MKMapItem(placemark: billMurrayPlacemark)
+            billMurray!.name = "Cracked (Bill Murray)"
+        }
+        if ronSwansonCoords != nil {
+            ronSwansonPlacemark = MKPlacemark(
+                coordinate: ronSwansonCoords!,
+                addressDictionary: nil)
+            ronSwanson = MKMapItem(placemark: ronSwansonPlacemark)
+            ronSwanson!.name = "Cracked (Ron Swanson)"
+        }
+        
+        //Pick the closest truck
+        if billMurray == nil && ronSwanson == nil {
+            //Both are closed. Pop up and don't let the user continue.
+            let alert = UIAlertController(title: "Cracked is Closed",
+                message: "Sorry! Cracked isn't open.",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK",
+                style: UIAlertActionStyle.Cancel,
+                handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            return
+        }
+        
+        if billMurray == nil {
+            DinerChoices.placeChoice = ronSwanson
+            return
+        }
+        
+        if ronSwanson == nil {
+            DinerChoices.placeChoice = billMurray
+            return
+        }
+        
+        if distance(billMurrayCoords!, b: currentLocation.coordinate) <
+            distance(ronSwansonCoords!, b: currentLocation.coordinate) {
+                DinerChoices.placeChoice = billMurray
+        } else {
+            DinerChoices.placeChoice = ronSwanson
+        }
+    }
+    
+    func getBillMurrayCoords() -> CLLocationCoordinate2D? {
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(.CalendarUnitHour | .CalendarUnitWeekday, fromDate: date)
+        let hour = components.hour
+        let weekday = components.weekday
+        
+        var coords: CLLocationCoordinate2D!
+        
+        if weekday >= Weekdays.Wednesday.rawValue &&
+            weekday <= Weekdays.Friday.rawValue &&
+            hour >= 8 &&
+            hour < 15 {
+                //GOODWIN & OREGON
+                coords = CLLocationCoordinate2D(latitude: 40.107484, longitude: -88.223840)
+        } else if (weekday == Weekdays.Monday.rawValue &&
+                hour >= 23) ||
+            (weekday == Weekdays.Tuesday.rawValue &&
+                hour < 3) {
+                //MONDAY NIGHT JOE’S
+                coords = CLLocationCoordinate2D(latitude: 40.109734, longitude: -88.232021)
+        } else if (weekday == Weekdays.Tuesday.rawValue &&
+                hour >= 23) ||
+            (weekday == Weekdays.Wednesday.rawValue &&
+                hour < 3) ||
+            (weekday == Weekdays.Wednesday.rawValue &&
+                hour >= 23) ||
+            (weekday == Weekdays.Thursday.rawValue &&
+                hour < 3)  ||
+            (weekday == Weekdays.Thursday.rawValue &&
+                hour >= 23) ||
+            (weekday == Weekdays.Friday.rawValue &&
+                hour < 3) {
+                //4TH & GREEN ST.
+                coords = CLLocationCoordinate2D(latitude: 40.110237, longitude: -88.233388)
+        } else if (weekday == Weekdays.Saturday.rawValue ||
+            weekday == Weekdays.Sunday.rawValue) &&
+            hour >= 10 &&
+            hour < 15 {
+                //GREEN & WRIGHT ST.
+                coords = CLLocationCoordinate2D(latitude: 40.110237, longitude: -88.228905)
+        } else {
+            coords = nil
+        }
+        return coords
+    }
+    
+    func getRonSwansonCoords() -> CLLocationCoordinate2D? {
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(.CalendarUnitHour | .CalendarUnitWeekday, fromDate: date)
+        let hour = components.hour
+        let weekday = components.weekday
+        
+        var coords: CLLocationCoordinate2D!
+        
+        if ((weekday == Weekdays.Monday.rawValue ||
+            weekday == Weekdays.Thursday.rawValue) &&
+            hour >= 8 &&
+            hour < 16) ||
+            ((weekday == Weekdays.Tuesday.rawValue ||
+                weekday == Weekdays.Wednesday.rawValue ||
+                weekday == Weekdays.Friday.rawValue) &&
+                hour >= 8 &&
+                hour < 17) {
+                //MATHEWS & SPRINGFIELD
+                coords = CLLocationCoordinate2D(latitude: 40.112687, longitude: -88.225605)
+        } else if (weekday == Weekdays.Saturday.rawValue &&
+            hour >= 23) ||
+            (weekday == Weekdays.Sunday.rawValue &&
+                hour < 3) {
+                    //NEIL & UNIVERSITY
+                    coords = CLLocationCoordinate2D(latitude: 40.116293, longitude: -88.243530)
+        } else {
+            coords = nil
+        }
+
+        return coords
     }
     
     func doSearch(foodType: String) {
@@ -72,6 +216,7 @@ class FoodViewController : UIViewController {
         } else if foodType  == "pizza" {
             DinerChoices.pizzaPlaces = p
         }
+        println("updateDinerChoices: \(p)")
     }
     
 }
