@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func homeButtonClick(sender: UIButton) {
+        var json:CUMTDjson = CUMTDjson()
         
     }
     

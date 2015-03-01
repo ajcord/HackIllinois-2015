@@ -135,6 +135,7 @@
 				BC9E86311AA21E99000B8E3D /* ViewControllers */,
 				FA3694871AA0E6AF00C18BBF /* Images.xcassets */,
 				FA36947E1AA0E6AF00C18BBF /* Supporting Files */,
+				BC86BB7B1AA243BC0008AB0A /* SettingKeys.swift */,
 			);
 			name = "Buzzed-Buddy";
 			path = "HackIllinois-2015";
@@ -272,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3694831AA0E6AF00C18BBF /* ViewController.swift in Sources */,
+				BC86BB7A1AA243620008AB0A /* CUMTDjson.swift in Sources */,
 				BC9E86371AA21F9A000B8E3D /* FoodMapViewController.swift in Sources */,
 				BC9E86391AA21FBF000B8E3D /* SettingsViewController.swift in Sources */,
 				FA3694811AA0E6AF00C18BBF /* AppDelegate.swift in Sources */,
@@ -281,6 +283,7 @@
 				BC9E863D1AA22068000B8E3D /* MapsController.swift in Sources */,
 				BCD3D9F81AA2ACB1000C4A7E /* DinerChoices.swift in Sources */,
 				BC9E86331AA21EFC000B8E3D /* FoodViewController.swift in Sources */,
+				BC86BB7C1AA243BC0008AB0A /* SettingKeys.swift in Sources */,
 				BC9E863B1AA21FED000B8E3D /* InfoViewController.swift in Sources */,
 				BC027AA71AA21E2300DBE3AF /* HomeViewController.swift in Sources */,
 			);

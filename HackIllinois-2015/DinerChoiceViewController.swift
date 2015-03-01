@@ -5,7 +5,7 @@
 //  Created by Brandon Groff on 2/28/15.
 //  Copyright (c) 2015 PointOfIgnition. All rights reserved.
 //
-
+import MapKit
 import UIKit
 import MapKit
 
@@ -18,7 +18,9 @@ class DinerChoiceViewController : UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        //Get the choices
+        //Get the choices'
+        while(DinerChoices.typeChoice == nil){ }
+        println("Diner choice is \(DinerChoices.typeChoice)")
         if DinerChoices.typeChoice == "burger" {
             choices = DinerChoices.burgersPlaces
         } else if DinerChoices.typeChoice == "taco" {
@@ -27,7 +29,7 @@ class DinerChoiceViewController : UIViewController {
             choices = DinerChoices.pizzaPlaces
         }
         println("viewDidLoad: \(choices)")
-        
+        println("Diner choice is \(DinerChoices.typeChoice)")
         for i in 0...(locationButtons.count - 1) {
             var button = locationButtons[i]
             button.setTitle(choices[i].name, forState: UIControlState.Normal)
@@ -37,6 +39,7 @@ class DinerChoiceViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     @IBAction func locationClick(sender: UIButton) {
@@ -46,5 +49,6 @@ class DinerChoiceViewController : UIViewController {
             }
         }
     }
+    
     
 }
