@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,31 +10,47 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 PointOfIgnition. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="439" width="441" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buzzed Buddy" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="140" width="441" height="43"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="9fV-gt-WfC">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mug" translatesAutoresizingMaskIntoConstraints="NO" id="vpp-Gu-UzR">
+                    <rect key="frame" x="70" y="30" width="341" height="341"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter" translatesAutoresizingMaskIntoConstraints="NO" id="ihK-wu-eJ8">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2015 PointOfIgnition. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8h-MO-KtR">
+                    <rect key="frame" x="0.0" y="455" width="480" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstItem="H8h-MO-KtR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1tJ-3b-GmY"/>
+                <constraint firstItem="ihK-wu-eJ8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4Bi-Op-5BY"/>
+                <constraint firstItem="9fV-gt-WfC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="53y-vg-8W1"/>
+                <constraint firstAttribute="centerY" secondItem="vpp-Gu-UzR" secondAttribute="centerY" constant="40" id="59o-uE-5u0"/>
+                <constraint firstItem="ihK-wu-eJ8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5wc-sD-S9P"/>
+                <constraint firstAttribute="trailing" secondItem="ihK-wu-eJ8" secondAttribute="trailing" id="KQl-j2-Q1c"/>
+                <constraint firstAttribute="trailing" secondItem="H8h-MO-KtR" secondAttribute="trailing" id="O7r-LN-DE9"/>
+                <constraint firstAttribute="trailing" secondItem="9fV-gt-WfC" secondAttribute="trailing" id="Zhr-gf-L7t"/>
+                <constraint firstAttribute="centerX" secondItem="vpp-Gu-UzR" secondAttribute="centerX" id="ccj-Od-1RU"/>
+                <constraint firstAttribute="bottom" secondItem="9fV-gt-WfC" secondAttribute="bottom" id="e3N-qZ-R1O"/>
+                <constraint firstItem="9fV-gt-WfC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gyF-0V-gpz"/>
+                <constraint firstAttribute="bottom" secondItem="ihK-wu-eJ8" secondAttribute="bottom" id="pXA-gw-jFu"/>
+                <constraint firstAttribute="centerX" secondItem="H8h-MO-KtR" secondAttribute="centerX" id="wDm-bW-0y6"/>
+                <constraint firstAttribute="bottom" secondItem="H8h-MO-KtR" secondAttribute="bottom" constant="8" id="xjF-RI-D1T"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="background" width="682" height="682"/>
+        <image name="filter" width="682" height="682"/>
+        <image name="mug" width="341" height="341"/>
+    </resources>
 </document>
