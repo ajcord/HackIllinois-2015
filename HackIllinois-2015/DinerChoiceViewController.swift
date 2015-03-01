@@ -19,22 +19,27 @@ class DinerChoiceViewController : UIViewController {
         super.viewWillAppear(animated)
         
         //Get the choices'
-        while(DinerChoices.typeChoice == nil){ }
+        //while(DinerChoices.pizzaPlaces.isEmpty){ }
         println("Diner choice is \(DinerChoices.typeChoice)")
-        if DinerChoices.typeChoice == "burger" {
-            choices = DinerChoices.burgersPlaces
-        } else if DinerChoices.typeChoice == "taco" {
-            choices = DinerChoices.tacosPlaces
-        } else if DinerChoices.typeChoice == "pizza" {
-            choices = DinerChoices.pizzaPlaces
+        while(choices == nil || choices.isEmpty){
+            println("In loop")
+            if DinerChoices.typeChoice == "burger" {
+                choices = DinerChoices.burgersPlaces
+            } else if DinerChoices.typeChoice == "taco" {
+                choices = DinerChoices.tacosPlaces
+            } else if DinerChoices.typeChoice == "pizza" {
+                choices = DinerChoices.pizzaPlaces
+            }
+            var a:Int32 = 1
+            wait(&a)
         }
-        println("viewDidLoad: \(choices)")
-        println("Diner choice is \(DinerChoices.typeChoice)")
+       // println("viewDidLoad: \(choices)")
+        //println("Diner choice is \(DinerChoices.typeChoice)")
         for i in 0...(locationButtons.count - 1) {
             var button = locationButtons[i]
             button.setTitle(choices[i].name, forState: UIControlState.Normal)
         }
-    }
+}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +48,10 @@ class DinerChoiceViewController : UIViewController {
     }
     
     @IBAction func locationClick(sender: UIButton) {
+        //while(DinerChoices.pizzaPlaces.isEmpty){ }
         for i in 0...(locationButtons.count - 1) {
             if locationButtons[i] == sender {
+                println("Setting placeChoice")
                 DinerChoices.placeChoice = choices[i]
             }
         }

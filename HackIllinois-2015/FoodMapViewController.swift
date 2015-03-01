@@ -69,6 +69,11 @@ class FoodMapViewController : UIViewController {
         //foodMap.addAnnotation(endPoint)
         let endplacemark = endPoint.placemark!
         foodMap.addAnnotation(endplacemark)
+        var deltaLon:CLLocationDegrees = CLLocationDegrees(0.05)
+        var deltaLat = CLLocationDegrees(0.05)
+        var span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: deltaLat, longitudeDelta: deltaLon)
+        var region:MKCoordinateRegion = MKCoordinateRegion(center: beginPoint.coordinate, span: span)
+        foodMap.setRegion(region,animated:true)
         
     }
     
