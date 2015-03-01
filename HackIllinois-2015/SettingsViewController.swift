@@ -14,9 +14,11 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
     var latitude:Double = 0.0;
     var longitude:Double = 0.0;
     var address:NSString = "";
+    var number = 0;
     
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var addressStatusLabel: UILabel!
+    @IBOutlet weak var numberTextField: UITextField!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
@@ -28,6 +30,7 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         addressTextField.delegate = self
+        numberTextField.delegate = self
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -36,12 +39,18 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        self.validateAddress(textField.text);
+        if (textField.hashValue == addressTextField.hashValue) {
+            self.validateAddress(textField.text);
+        } else {
+            if let number = numberTextField.text.toInt() {
+                self.number = number
+            }
+        }
     }    
     
     @IBAction func saveSettingsClick(sender: UIBarButtonItem) {
         let status: NSString = addressStatusLabel.text!;
-        if (status.isEqualToString("Address found!")){
+        if (status.isEqualToString("Address found!") || self.number != 0){
             self.saveSettings();
             savePopUp("Settings saved!", message: "Woo!");
         } else {
@@ -54,9 +63,11 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
         if(self.settingsAlreadySet()){
             print("Settings found!")
             self.addressTextField.placeholder = NSUserDefaults.standardUserDefaults().stringForKey("homeAddress");
+            self.numberTextField.placeholder = NSUserDefaults.standardUserDefaults().stringForKey("number");
         } else {
             print("Settings not found!")
             self.addressTextField.placeholder = SettingsKey.defaultHomeAddress;
+            self.numberTextField.placeholder = String(SettingsKey.defaultNumber);
         }
     }
     
@@ -83,9 +94,11 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
         println(self.latitude);
         println(self.longitude);
         println(self.address);
+        println(self.number)
         NSUserDefaults.standardUserDefaults().setDouble(self.latitude, forKey: "latitude");
         NSUserDefaults.standardUserDefaults().setDouble(self.longitude, forKey: "longitude");
         NSUserDefaults.standardUserDefaults().setValue(self.address as String, forKey: "homeAddress");
+        NSUserDefaults.standardUserDefaults().setInteger(self.number, forKey: "number");
     }
     
     func validateAddress(address: NSString)->Void {
