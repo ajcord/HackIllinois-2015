@@ -12,6 +12,8 @@ import MapKit
 class HomeViewController : UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var homeMapView: MKMapView!
+    
+    @IBOutlet weak var navigatorText: UITextView!
     var directions: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -39,6 +41,7 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
         println("View did load \(directions)")
         //fatalError("init(coder:) has not been implemented")
         //mapView(this,
+        
         
     }
     
@@ -112,8 +115,7 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
         
         if index == directions.count-1 {
            // println("Done: \(directions)")
-            var finalString = concatanateStringArray(directions)
-            println(finalString)
+            navigatorText.text = concatanateStringArray(directions)
         }
         
     }
