@@ -14,4 +14,5 @@ struct SettingsKey {
     static let defaultHomeLon:Double = -88.220301//Lon of PAR
     static let defaultHomeAddress:String = "EX: Pennsylvania Avenue Residence, Urbana, Illinois"
     static let defaultNumber:Int = 7086024125// Paul!
+    static var hardMode:Bool = true// Hard Mode
 }

@@ -16,9 +16,18 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
     var address:NSString = "";
     var number = 0;
     
+    @IBAction func hardModeSwitch(sender: AnyObject) {
+        //SettingsKey.hardMode = !SettingsKey.hardMode
+    }
+    
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var addressStatusLabel: UILabel!
     @IBOutlet weak var numberTextField: UITextField!
+    
+    @IBAction func hardSwitch() {
+        SettingsKey.hardMode = !SettingsKey.hardMode
+        println(SettingsKey.hardMode)
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);

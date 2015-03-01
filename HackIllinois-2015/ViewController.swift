@@ -19,6 +19,11 @@ class ViewController: UIViewController {
         self.setTitleText()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        exButton.hidden = SettingsKey.hardMode
+    }
+    
     @IBAction func foodButtonClick(sender: UIButton) {
         
         

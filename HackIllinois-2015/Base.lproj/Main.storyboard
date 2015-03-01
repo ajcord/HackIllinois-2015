@@ -80,10 +80,11 @@
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrU-dm-0Nb">
                                 <rect key="frame" x="16" y="424" width="568" height="168"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
-                                <state key="normal" title="Ex" backgroundImage="Girl_default">
+                                <state key="normal" title="Call Ex" backgroundImage="phone_default">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="phone_pressed"/>
                                 <connections>
                                     <action selector="dialExClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CF5-2W-nWg"/>
                                 </connections>
@@ -205,12 +206,24 @@
                                     <action selector="addressChanged:" destination="onF-7y-YZP" eventType="valueChanged" id="A64-q8-pds"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ex's Phone Number: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pim-bN-CIC">
-                                <rect key="frame" x="207" y="142" width="187" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend's Phone Number: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pim-bN-CIC">
+                                <rect key="frame" x="191" y="142" width="220" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqx-JD-Dyw">
+                                <rect key="frame" x="257" y="508" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wts-dE-CQH">
+                                <rect key="frame" x="276" y="549" width="51" height="31"/>
+                                <connections>
+                                    <action selector="hardSwitch" destination="onF-7y-YZP" eventType="valueChanged" id="1AT-61-u2e"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -218,13 +231,17 @@
                             <constraint firstItem="DpY-Se-lTw" firstAttribute="top" secondItem="Pim-bN-CIC" secondAttribute="bottom" constant="30" id="1nr-qZ-AAk"/>
                             <constraint firstItem="Pim-bN-CIC" firstAttribute="top" secondItem="Nsv-ek-BaM" secondAttribute="bottom" constant="8" id="3Hm-9A-aL8"/>
                             <constraint firstItem="Pim-bN-CIC" firstAttribute="top" secondItem="rtI-H5-0bk" secondAttribute="bottom" constant="60" id="5OK-US-sFb"/>
+                            <constraint firstItem="6Ga-E2-NKA" firstAttribute="top" secondItem="Pqx-JD-Dyw" secondAttribute="bottom" constant="20" id="6YS-dO-45x"/>
+                            <constraint firstItem="wts-dE-CQH" firstAttribute="centerX" secondItem="Pcy-UK-rAB" secondAttribute="centerX" constant="0.5" id="6rH-Ji-HXh"/>
                             <constraint firstItem="DpY-Se-lTw" firstAttribute="leading" secondItem="iGe-ab-bDl" secondAttribute="leadingMargin" id="Cz7-B8-eMQ"/>
+                            <constraint firstItem="Pcy-UK-rAB" firstAttribute="centerX" secondItem="Pqx-JD-Dyw" secondAttribute="centerX" id="ECx-Zn-ZJX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pim-bN-CIC" secondAttribute="trailing" constant="191" id="EOY-nP-Rdi"/>
                             <constraint firstItem="rtI-H5-0bk" firstAttribute="top" secondItem="DpY-Se-lTw" secondAttribute="bottom" constant="60" id="EoZ-2B-jB0"/>
                             <constraint firstItem="DpY-Se-lTw" firstAttribute="top" secondItem="Pim-bN-CIC" secondAttribute="bottom" constant="8" id="GHk-0Z-kP6"/>
                             <constraint firstItem="DpY-Se-lTw" firstAttribute="trailing" secondItem="iGe-ab-bDl" secondAttribute="trailingMargin" id="GT9-fK-PRH"/>
                             <constraint firstItem="Nsv-ek-BaM" firstAttribute="leading" secondItem="iGe-ab-bDl" secondAttribute="leadingMargin" id="JKs-9r-KCZ"/>
                             <constraint firstAttribute="centerX" secondItem="rtI-H5-0bk" secondAttribute="centerX" id="KB8-QW-ox1"/>
+                            <constraint firstItem="wts-dE-CQH" firstAttribute="top" secondItem="Pqx-JD-Dyw" secondAttribute="bottom" constant="20" id="Kkj-FC-HTY"/>
                             <constraint firstItem="Pcy-UK-rAB" firstAttribute="top" secondItem="xYS-Pm-Ecs" secondAttribute="bottom" constant="8" id="Ld0-6z-nbe"/>
                             <constraint firstItem="Pim-bN-CIC" firstAttribute="leading" secondItem="iGe-ab-bDl" secondAttribute="leadingMargin" constant="192" id="NqX-wW-jtR"/>
                             <constraint firstItem="Nsv-ek-BaM" firstAttribute="trailing" secondItem="iGe-ab-bDl" secondAttribute="trailingMargin" id="RPs-zf-boU"/>
@@ -245,6 +262,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Pim-bN-CIC" secondAttribute="trailing" constant="191" id="mD3-mJ-q9U"/>
                             <constraint firstItem="Pim-bN-CIC" firstAttribute="top" secondItem="Nsv-ek-BaM" secondAttribute="bottom" constant="152" id="smA-P3-ClF"/>
                             <constraint firstItem="rtI-H5-0bk" firstAttribute="leading" secondItem="iGe-ab-bDl" secondAttribute="leadingMargin" constant="256" id="tPm-4G-8eC"/>
+                            <constraint firstItem="6Ga-E2-NKA" firstAttribute="top" secondItem="wts-dE-CQH" secondAttribute="bottom" constant="20" id="vVb-8w-oPe"/>
                             <constraint firstItem="rtI-H5-0bk" firstAttribute="centerX" secondItem="Pcy-UK-rAB" secondAttribute="centerX" constant="0.5" id="zJi-bC-7Di"/>
                         </constraints>
                         <variation key="default">
@@ -264,6 +282,7 @@
                                 <exclude reference="czX-BU-aDQ"/>
                                 <exclude reference="l1p-Jq-aom"/>
                                 <exclude reference="tPm-4G-8eC"/>
+                                <exclude reference="6YS-dO-45x"/>
                             </mask>
                         </variation>
                     </view>
@@ -669,12 +688,13 @@
         <image name="Burger_default" width="1872" height="1248"/>
         <image name="Burger_pressed" width="1872" height="1248"/>
         <image name="Cracked_default" width="903" height="816"/>
-        <image name="Girl_default" width="853" height="480"/>
         <image name="Info-icon" width="30" height="30"/>
         <image name="burger2_default" width="300" height="178"/>
         <image name="burger2_pressed" width="300" height="178"/>
         <image name="home_default" width="560" height="400"/>
         <image name="home_pressed" width="560" height="400"/>
+        <image name="phone_default" width="850" height="502"/>
+        <image name="phone_pressed" width="850" height="502"/>
         <image name="pizza_default" width="526" height="425"/>
         <image name="pizza_pressed" width="526" height="425"/>
         <image name="settings_icon" width="30" height="30"/>
