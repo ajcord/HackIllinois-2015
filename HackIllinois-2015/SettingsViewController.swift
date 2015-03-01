@@ -14,25 +14,24 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
     var latitude:Double = 0.0;
     var longitude:Double = 0.0;
     var address:NSString = "";
-    var number = 0;
+    var phoneNumber = 0;
     
-    @IBAction func hardModeSwitch(sender: AnyObject) {
-        //SettingsKey.hardMode = !SettingsKey.hardMode
-    }
+    
     
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var addressStatusLabel: UILabel!
     @IBOutlet weak var numberTextField: UITextField!
-    
-    @IBAction func hardSwitch() {
-        SettingsKey.hardMode = !SettingsKey.hardMode
-        println(SettingsKey.hardMode)
-    }
+    @IBOutlet weak var phoneNumberLabel: UILabel!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
         self.loadSettings()
         addressStatusLabel.hidden = true;
+        if (!NSUserDefaults.standardUserDefaults().boolForKey("specialSettings"))
+        {//if special settings are disabled, hide phone number field
+            numberTextField.hidden = true;
+            phoneNumberLabel.hidden = true;
+        }
     }
     
     override func viewDidLoad() {
@@ -52,14 +51,40 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
             self.validateAddress(textField.text);
         } else {
             if let number = numberTextField.text.toInt() {
-                self.number = number
+                self.phoneNumber = number
             }
         }
-    }    
+    }
+    
+    @IBAction func specialSettingsSwitched(sender: UISwitch) {
+        if (self.specialSettingsEnabled()){ //was enabled, now diabled
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: "specialSettings")
+            numberTextField.hidden = true
+            phoneNumberLabel.hidden = true
+            
+        } else { //was disabled, now enabled
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "specialSettings")
+            numberTextField.hidden = false
+            phoneNumberLabel.hidden = false
+        }
+    println(NSUserDefaults.standardUserDefaults().boolForKey("specialSettings"))
+    }
+    
+    func specialSettingsEnabled()->Bool{
+        var switchState:Bool = NSUserDefaults.standardUserDefaults().boolForKey("specialSettings")
+        if (switchState){
+            return true
+        } else if (!switchState){
+            return false;
+        } else {
+            NSUserDefaults.standardUserDefaults().setBool(SettingsKey.defaultSettingsMode, forKey: "specialSettings")
+            return false;
+        }
+    }
     
     @IBAction func saveSettingsClick(sender: UIBarButtonItem) {
         let status: NSString = addressStatusLabel.text!;
-        if (status.isEqualToString("Address found!") || self.number != 0){
+        if (status.isEqualToString("Address found!") || self.phoneNumber != 0){
             self.saveSettings();
             savePopUp("Settings saved!", message: "Woo!");
         } else {
@@ -68,25 +93,28 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
     }
     
     func loadSettings(){
-        print("Loading settings...")
-        if(self.settingsAlreadySet()){
-            print("Settings found!")
+        if(self.locationSettingsAlreadySet()){
             self.addressTextField.placeholder = NSUserDefaults.standardUserDefaults().stringForKey("homeAddress");
-            self.numberTextField.placeholder = NSUserDefaults.standardUserDefaults().stringForKey("number");
+            
         } else {
-            print("Settings not found!")
             self.addressTextField.placeholder = SettingsKey.defaultHomeAddress;
+        }
+        if (self.phoneSettingsSet()){
+            self.numberTextField.placeholder = NSUserDefaults.standardUserDefaults().stringForKey("phoneNumber");
+        } else {
             self.numberTextField.placeholder = String(SettingsKey.defaultNumber);
         }
+        //
     }
     
-    func settingsAlreadySet()->Bool {
+    func locationSettingsAlreadySet()->Bool {
         if (nil == NSUserDefaults.standardUserDefaults().stringForKey("homeAddress")?.hashValue){
             return false;
         }
         var latitude:Double = NSUserDefaults.standardUserDefaults().doubleForKey("latitude");
         var longitude:Double = NSUserDefaults.standardUserDefaults().doubleForKey("longitude");
         var address:String = NSUserDefaults.standardUserDefaults().stringForKey("homeAddress")!;
+        
         if (latitude == 0.0){
             return false;
         } else if (longitude == 0.0){
@@ -99,15 +127,25 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
         
     }
     
+    func phoneSettingsSet()->Bool {
+        var phoneNumber: Int = NSUserDefaults.standardUserDefaults().integerForKey("phoneNumber")
+        if (phoneNumber == SettingsKey.defaultNumber ||
+            phoneNumber == 0){
+            return false;
+        } else {
+            return true;
+        }
+    }
+    
     func saveSettings(){
-        println(self.latitude);
-        println(self.longitude);
-        println(self.address);
-        println(self.number)
         NSUserDefaults.standardUserDefaults().setDouble(self.latitude, forKey: "latitude");
         NSUserDefaults.standardUserDefaults().setDouble(self.longitude, forKey: "longitude");
-        NSUserDefaults.standardUserDefaults().setValue(self.address as String, forKey: "homeAddress");
-        NSUserDefaults.standardUserDefaults().setInteger(self.number, forKey: "number");
+        if (!self.address.isEqualToString("")){ //if string NOT empty
+            NSUserDefaults.standardUserDefaults().setValue(self.address as String, forKey: "homeAddress");
+        }
+        if (self.phoneNumber != 0){
+            NSUserDefaults.standardUserDefaults().setInteger(self.phoneNumber, forKey: "phoneNumber");
+        }
     }
     
     func validateAddress(address: NSString)->Void {
