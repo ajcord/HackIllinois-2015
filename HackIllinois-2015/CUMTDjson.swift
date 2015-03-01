@@ -36,8 +36,8 @@ class CUMTDjson{
         var curLat:String = "\(currentLocation.coordinate.latitude)"
         var curLon:String = "\(currentLocation.coordinate.longitude)"
         
-        let homeLat:String = SettingsKeys.homeLat
-        let homeLon:String = SettingsKeys.homeLon
+        let homeLat:String = NSUserDefaults.standardUserDefaults().doubleForKey("latitude").description;
+        let homeLon:String = NSUserDefaults.standardUserDefaults().doubleForKey("longitude").description;
         
         var url:NSURL = getURLFromLatLon(curLat, origin_longitude: curLon, dest_latitude: homeLat, dest_longitude: homeLon)
         println(url)
