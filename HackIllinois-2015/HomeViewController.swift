@@ -97,16 +97,19 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
             if(isWalk){
                 
                 for step in route.steps{
+                    println(step.instructions)
                     directions[index] += step.instructions + "\n" //.append(step.instructions)
                 }
             }
             homeMapView.addOverlay(route.polyline,level:MKOverlayLevel.AboveRoads)
         }
         
-        if index == directions.count-1 {
+//        println(directions)
+//        if index == directions.count-1 {
             navigatorText.text = concatanateStringArray(directions)
             navigatorText.textColor = (UIColor .whiteColor())
-        }
+//            println(navigatorText.text)
+//        }
     }
     
     func parseJSONDict(jsonDict:NSDictionary){
