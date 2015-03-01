@@ -41,7 +41,7 @@
 		BC027AA21AA195CC00DBE3AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BC027AA41AA21BBE00DBE3AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BC027AA61AA21E2300DBE3AF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		BC86BB791AA243620008AB0A /* CUMTDjson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CUMTDjson.swift; sourceTree = "<group>"; };
+		BC86BB791AA243620008AB0A /* CUMTDjson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CUMTDjson.swift; path = ../CUMTDjson.swift; sourceTree = "<group>"; };
 		BC86BB7B1AA243BC0008AB0A /* SettingKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingKeys.swift; sourceTree = "<group>"; };
 		BC9E86321AA21EFC000B8E3D /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		BC9E86341AA21F63000B8E3D /* DinerChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerChoiceViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +89,6 @@
 				BC027AA61AA21E2300DBE3AF /* HomeViewController.swift */,
 				BC9E86321AA21EFC000B8E3D /* FoodViewController.swift */,
 				BC9E86341AA21F63000B8E3D /* DinerChoiceViewController.swift */,
-				BC86BB791AA243620008AB0A /* CUMTDjson.swift */,
 				BC9E86361AA21F9A000B8E3D /* FoodMapViewController.swift */,
 				BC9E86381AA21FBF000B8E3D /* SettingsViewController.swift */,
 				BC9E863A1AA21FED000B8E3D /* InfoViewController.swift */,
@@ -161,6 +160,7 @@
 		FAFA1FB31AA2451F00CCF43D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC86BB791AA243620008AB0A /* CUMTDjson.swift */,
 				FAFA1FB41AA2451F00CCF43D /* LocationController.swift */,
 			);
 			path = Model;

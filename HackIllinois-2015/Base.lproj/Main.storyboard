@@ -327,7 +327,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KM-i2-C9v">
+                            <button opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KM-i2-C9v">
                                 <rect key="frame" x="16" y="247" width="568" height="166"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -430,6 +430,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="FOOD!" id="42S-Ih-8rl"/>
+                    <connections>
+                        <outlet property="foodMap" destination="aHi-CQ-Wgu" id="RCn-fn-dId"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpD-Gc-39W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -463,6 +466,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="vNL-oH-z9k"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="homeMapView" destination="gO0-kw-6L9" id="av5-ZY-eaU"/>
                         <outlet property="searchDisplayController" destination="ngz-Mj-6iT" id="qNm-I2-InK"/>
                     </connections>
                 </viewController>
@@ -516,7 +520,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vzf-6h-tra"/>
-        <segue reference="mdx-r3-Zft"/>
+        <segue reference="zRe-c5-Ywb"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
