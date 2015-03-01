@@ -18,30 +18,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HackIllinois 2015 Hack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKD-mF-qH8">
-                                <rect key="frame" x="16" y="120" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alex Cordonnier, Brandon Groff, Daniel Carballal, Paul Gibbons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvK-Ko-tls">
-                                <rect key="frame" x="0.0" y="0.0" width="483" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get directions to food or home, or call your ex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vka-Zv-e0X">
-                                <rect key="frame" x="0.0" y="0.0" width="353" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omJ-1L-oir">
+                                <rect key="frame" x="16" y="72" width="568" height="520"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Our goal: To make traveling alone on those late nights a little bit safer, and to ensure that our users make it home. 
+
+This app intends to aid, not harm users. We accept no responsibility for any actions, damages, or harm done via the usage of this app.
+
+This app makes extensive use of Apple Maps, and also incorporates the CUMTD Bus System API. We claim no credit in developing these APIs, but we would like to thank those who developed these APIs for public use.
+
+This app locally stores a user’s home location; this data is not uploaded or saved anywhere else, but is only used for Map directions whenever a user chooses to go home. 
+
+Some of the images used in this app are not property of the developers. However, the application icon and launch image are property of the developers, and may not be replicated for distribution without owner permission.
+
+**A big shout out to UIUC for hosting HackIllinois, the event at which this app was created.**
+[ChallengePost Link]
+
+Developers:
+Alex Cordonnier, UIUC
+www.github.com/ajcord
+
+Brandon Groff, BSU
+www.github.com/EPICmynamesBG
+
+Daniel Carballal, UIUC
+www.github.com/danielcarballal
+
+Paul Gibbons, UIUC
+www.github.com/pualtgibbons
+</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="cKD-mF-qH8" firstAttribute="top" secondItem="g9o-CJ-bpZ" secondAttribute="bottom" constant="56" id="STm-IK-056"/>
-                            <constraint firstItem="cKD-mF-qH8" firstAttribute="leading" secondItem="0IX-hh-dcn" secondAttribute="leadingMargin" id="eob-Zw-VvA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cKD-mF-qH8" secondAttribute="trailing" id="hfn-US-d5C"/>
+                            <constraint firstItem="omJ-1L-oir" firstAttribute="leading" secondItem="0IX-hh-dcn" secondAttribute="leadingMargin" id="VfE-YH-kpK"/>
+                            <constraint firstItem="omJ-1L-oir" firstAttribute="trailing" secondItem="0IX-hh-dcn" secondAttribute="trailingMargin" id="eme-3D-CHo"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="omJ-1L-oir" secondAttribute="bottom" constant="8" id="f4F-th-saL"/>
+                            <constraint firstItem="omJ-1L-oir" firstAttribute="top" secondItem="g9o-CJ-bpZ" secondAttribute="bottom" constant="8" id="zVz-31-myv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Info" id="h9H-ED-Eq7">
@@ -201,7 +217,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="addressChanged:" destination="onF-7y-YZP" eventType="valueChanged" id="A64-q8-pds"/>
                                 </connections>
