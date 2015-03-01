@@ -39,28 +39,6 @@ class FoodViewController : UIViewController {
         doSearch("pizza")
     }
     
-//    override func viewWillAppear(animated: Bool) {
-//        super.viewWillAppear(animated)
-//        
-//        for button in foodSelectionButtons {
-//            //Disable all the buttons at first
-//            button.enabled = false
-//        }
-//    }
-    
-//    override func viewWillDisappear(animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        
-//        //Wait for searches to complete
-//        println("Waiting on diner choices...")
-//        while DinerChoices.burgersPlaces.isEmpty ||
-//            DinerChoices.tacosPlaces.isEmpty ||
-//            DinerChoices.pizzaPlaces.isEmpty {
-//                println("Looping")
-//        }
-//        println("Done waiting for diner choices")
-//    }
-    
     @IBAction func bugerButtonClick(sender: UIButton) {
         DinerChoices.typeChoice = "burger"
     }
@@ -221,7 +199,7 @@ class FoodViewController : UIViewController {
             center: location.coordinate,
             span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
         )
-        println("doSearch: \(foodType)")
+        
         let search = MKLocalSearch(request: request)
         search.startWithCompletionHandler { (response, error) in
             self.updateDinerChoices(response.mapItems as [MKMapItem], foodType: foodType)
@@ -236,7 +214,6 @@ class FoodViewController : UIViewController {
     }
     
     func updateDinerChoices(places: [MKMapItem], foodType: String) {
-        println("updateDinerChoices: \(places)")
         var p = places
         let location = locationController.getLocation()
         p.sort({ self.distance($0.placemark.coordinate, b: location.coordinate) < self.distance($1.placemark.coordinate, b: location.coordinate) })
@@ -247,7 +224,6 @@ class FoodViewController : UIViewController {
         } else if foodType  == "pizza" {
             DinerChoices.pizzaPlaces = p
         }
-        println("updateDinerChoices: \(p)")
         
         if !DinerChoices.burgersPlaces.isEmpty &&
             !DinerChoices.tacosPlaces.isEmpty &&
