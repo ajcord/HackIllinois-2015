@@ -63,7 +63,7 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
         return MKOverlayRenderer()
     }
     
-    func addNewRoute(source: MKMapItem, destination: MKMapItem, color: String ){
+    func addNewRoute(source: MKMapItem, destination: MKMapItem, color: String, isWalk: Bool ){
         let request:MKDirectionsRequest = MKDirectionsRequest()
         request.setDestination(destination)
         request.setSource(source)
@@ -77,11 +77,11 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
                 println("THERE'S AN ERROR")
             }
             else{
-                self.showRoute(response, color: color)
+                self.showRoute(response, color: color, isWalk: isWalk)
             }
         })
     }
-    func showRoute(response: MKDirectionsResponse, color: String, isWalk:isBool){
+    func showRoute(response: MKDirectionsResponse, color: String, isWalk: Bool){
         for route in response.routes as [MKRoute]{
             route.polyline.title = String(color)
             
@@ -123,7 +123,7 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
                 let endplacemark = MKPlacemark(coordinate:endlocation, addressDictionary: nil)
                 let beginPoint = MKMapItem(placemark: beginplacemark)
                 let endPoint = MKMapItem(placemark: endplacemark)
-                addNewRoute(beginPoint,destination: endPoint, color: "Walk")
+                addNewRoute(beginPoint,destination: endPoint, color: "Walk",isWalk: true)
                 homeMapView.addAnnotation(endplacemark)
                 
                /* let request = MKDirectionsRequest()
@@ -168,8 +168,13 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
                     let beginPoint = MKMapItem(placemark: beginplacemark)
                     let endPoint = MKMapItem(placemark: endplacemark)
                     let color = (service["route"] as NSDictionary)["route_color"] as String
-                    addNewRoute(beginPoint,destination: endPoint, color: color)
+                    addNewRoute(beginPoint,destination: endPoint, color: color, isWalk: false)
                     homeMapView.addAnnotation(endplacemark)
+                    let route = service["route"] as NSDictionary
+                    let route_id = route["route_id"] as String
+                    let stop_id = begin["name"] as String
+                    directions.append("Get on the \(route_id) at \(stop_id)")
+                    print(directions)
                 }
                 
             }
