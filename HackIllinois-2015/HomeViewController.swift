@@ -12,7 +12,6 @@ import MapKit
 class HomeViewController : UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var homeMapView: MKMapView!
-    
     var directions: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -35,13 +34,28 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
             
         }
         parseJSONDict(jsonDict)
+
+        
+        println("View did load \(directions)")
         //fatalError("init(coder:) has not been implemented")
         //mapView(this,
+        
+    }
+    
+    func concatanateStringArray(array: [String]) -> String{
+        var result:String = ""
+        var i:Int = 1
+        for elem in array{
+            result += "\(i). " + elem + "\r\n"
+            i++
+            
+        }
+        return result
     }
     
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
         if overlay is MKPolyline{
-            println(overlay.title)
+           // println(overlay.title)
             var polylineRenderer = MKPolylineRenderer(overlay: overlay)
             if(overlay.title == "Walk"){
                 polylineRenderer.strokeColor = UIColor.blueColor()
@@ -69,32 +83,37 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
         request.setSource(source)
         request.requestsAlternateRoutes = false
         
-        let directions = MKDirections(request:request)
-        
-        directions.calculateDirectionsWithCompletionHandler({(response:MKDirectionsResponse!, error: NSError!) in
+        let directionSteps = MKDirections(request:request)
+        let i = directions.count
+        directions.append("")
+        directionSteps.calculateDirectionsWithCompletionHandler({(response:MKDirectionsResponse!, error: NSError!) in
             if error != nil{
                 //Handle error
                 println("THERE'S AN ERROR")
             }
             else{
-                self.showRoute(response, color: color, isWalk: isWalk)
+                self.showRoute(response, color: color, isWalk: isWalk, index:i)
             }
         })
     }
-    func showRoute(response: MKDirectionsResponse, color: String, isWalk: Bool){
+    func showRoute(response: MKDirectionsResponse, color: String, isWalk: Bool, index: Int){
         for route in response.routes as [MKRoute]{
             route.polyline.title = String(color)
             
-            homeMapView.addOverlay(route.polyline,level:MKOverlayLevel.AboveRoads)
             if(isWalk){
-                for  step in route.steps{
-                    //println(step.instructions)
-                    directions.append(step.instructions)
+                
+                for step in route.steps{
+                    println("Walking directions" + step.instructions)
+                    directions[index] += step.instructions + "\n" //.append(step.instructions)
                 }
             }
-            // for step in route.steps{
-            //   println(step.instructions)
-            //}
+            homeMapView.addOverlay(route.polyline,level:MKOverlayLevel.AboveRoads)
+        }
+        
+        if index == directions.count-1 {
+           // println("Done: \(directions)")
+            var finalString = concatanateStringArray(directions)
+            println(finalString)
         }
         
     }
@@ -107,8 +126,8 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
         //println(jsonDict)
         //println(itineraries)
         println(legs)
-        for i in 0...legs.count - 1 {
-            let leg = legs[i] as NSDictionary
+        for leg in legs {
+            println("Leg \(leg)")
             if leg["type"] as NSString == "Walk" {
                 
                 let begin = (leg["walk"] as NSDictionary)["begin"] as NSDictionary
@@ -170,14 +189,22 @@ class HomeViewController : UIViewController, MKMapViewDelegate {
                     let color = (service["route"] as NSDictionary)["route_color"] as String
                     addNewRoute(beginPoint,destination: endPoint, color: color, isWalk: false)
                     homeMapView.addAnnotation(endplacemark)
+                    
                     let route = service["route"] as NSDictionary
                     let route_id = route["route_id"] as String
                     let stop_id = begin["name"] as String
                     directions.append("Get on the \(route_id) at \(stop_id)")
-                    print(directions)
+                    
+                    var deltaLon:CLLocationDegrees = CLLocationDegrees(0.05)
+                    var deltaLat = CLLocationDegrees(0.05)
+                    var span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: deltaLat, longitudeDelta: deltaLon)
+                    var region:MKCoordinateRegion = MKCoordinateRegion(center: beginlocation, span: span)
+                    homeMapView.setRegion(region,animated:true)
+                    
                 }
                 
             }
+            println("Current directions \(directions)")
             
         }
         
