@@ -43,9 +43,9 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
         let status: NSString = addressStatusLabel.text!;
         if (status.isEqualToString("Address found!")){
             self.saveSettings();
-            savePopUp("Settings saved!");
+            savePopUp("Settings saved!", message: "Woo!");
         } else {
-            savePopUp("Settings could not be saved!");
+            savePopUp("Settings could not be saved!", message: "Please hit 'Done' before hitting save.");
         }
     }
     
@@ -107,7 +107,7 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
                     var addressArray = loc.placemark.description
                         .componentsSeparatedByCharactersInSet(delimiters);
                     var homeAddress = addressArray[1] + "," + addressArray[2];
-                    homeAddress += "," + addressArray[3] + "," + addressArray[4];
+                    homeAddress += "," + addressArray[3];
                     
                     self.address = homeAddress;
                     self.addressStatusLabel.text = "Address found!";
@@ -121,9 +121,9 @@ class SettingsViewController : UIViewController, UITextFieldDelegate {
         return;
     }
     
-    func savePopUp(title: NSString) {
+    func savePopUp(title: String, message: String) {
         
-        let alert = UIAlertController(title: title, message: "Settings saved!",
+        let alert = UIAlertController(title: title, message: message,
             preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel,
