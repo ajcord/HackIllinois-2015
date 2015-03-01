@@ -20,7 +20,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omJ-1L-oir">
                                 <rect key="frame" x="16" y="72" width="568" height="520"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Our goal: To make traveling alone on those late nights a little bit safer, and to ensure that our users make it home. 
+                                <string key="text">Our goal: To make traveling alone on those late nights a little bit safer, and to ensure that our users make it home. 
 
 This app intends to aid, not harm users. We accept no responsibility for any actions, damages, or harm done via the usage of this app.
 
@@ -45,7 +45,7 @@ www.github.com/danielcarballal
 
 Paul Gibbons, UIUC
 www.github.com/pualtgibbons
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
