@@ -114,6 +114,7 @@
 		FA36947D1AA0E6AF00C18BBF /* Buzzed-Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				FAFA1FB31AA2451F00CCF43D /* Model */,
 				FA3694801AA0E6AF00C18BBF /* AppDelegate.swift */,
 				BC62D6EA1AA24EC100B1BE24 /* SettingsKey.swift */,
 				BC9E86311AA21E99000B8E3D /* ViewControllers */,
@@ -149,6 +150,15 @@
 				FA3694951AA0E6AF00C18BBF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAFA1FB31AA2451F00CCF43D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAFA1FB41AA2451F00CCF43D /* LocationController.swift */,
+				FA519E0B1AA291E40091F270 /* DinerChoices.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +276,7 @@
 				BC62D6EB1AA24EC100B1BE24 /* SettingsKey.swift in Sources */,
 				BC9E86331AA21EFC000B8E3D /* FoodViewController.swift in Sources */,
 				BC9E863B1AA21FED000B8E3D /* InfoViewController.swift in Sources */,
+				FAFA1FB51AA2451F00CCF43D /* LocationController.swift in Sources */,
 				BC027AA71AA21E2300DBE3AF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
