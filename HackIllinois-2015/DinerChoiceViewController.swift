@@ -21,8 +21,8 @@ class DinerChoiceViewController : UIViewController {
         //Get the choices'
         //while(DinerChoices.pizzaPlaces.isEmpty){ }
         println("Diner choice is \(DinerChoices.typeChoice)")
-        while(choices == nil || choices.isEmpty){
-            println("In loop")
+//        while(choices == nil || choices.isEmpty){
+//            println("In loop")
             if DinerChoices.typeChoice == "burger" {
                 choices = DinerChoices.burgersPlaces
             } else if DinerChoices.typeChoice == "taco" {
@@ -30,10 +30,10 @@ class DinerChoiceViewController : UIViewController {
             } else if DinerChoices.typeChoice == "pizza" {
                 choices = DinerChoices.pizzaPlaces
             }
-            var a:Int32 = 1
-            wait(&a)
-        }
-       // println("viewDidLoad: \(choices)")
+//            var a:Int32 = 1000
+//            wait(&a)
+//        }
+        println("viewDidLoad: \(choices)")
         //println("Diner choice is \(DinerChoices.typeChoice)")
         for i in 0...(locationButtons.count - 1) {
             var button = locationButtons[i]

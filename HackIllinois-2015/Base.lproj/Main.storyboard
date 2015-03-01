@@ -352,6 +352,12 @@
                     <navigationItem key="navigationItem" title="Food" id="R63-B0-9p8">
                         <barButtonItem key="backBarButtonItem" title="Back" id="P0V-W0-2Jr"/>
                     </navigationItem>
+                    <connections>
+                        <outletCollection property="foodSelectionButtons" destination="yqR-kG-gRx" collectionClass="NSMutableArray" id="vzb-ba-dAj"/>
+                        <outletCollection property="foodSelectionButtons" destination="zT2-97-PaJ" collectionClass="NSMutableArray" id="smb-Co-h4c"/>
+                        <outletCollection property="foodSelectionButtons" destination="lJq-d2-TJM" collectionClass="NSMutableArray" id="VC5-Gl-bBS"/>
+                        <outletCollection property="foodSelectionButtons" destination="5CS-Tx-JrU" collectionClass="NSMutableArray" id="ObN-3L-YmN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9j7-xh-mda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -369,7 +375,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KM-i2-C9v">
+                            <button opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3KM-i2-C9v">
                                 <rect key="frame" x="16" y="247" width="568" height="166"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -382,7 +388,7 @@
                                     <segue destination="wmf-Sd-CaS" kind="show" identifier="LocationTwoSegue" id="cYh-lO-RLz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8l7-xp-Dz4">
+                            <button opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8l7-xp-Dz4">
                                 <rect key="frame" x="16" y="427" width="568" height="165"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -395,7 +401,7 @@
                                     <segue destination="wmf-Sd-CaS" kind="show" identifier="LocationThreeSegue" id="mdx-r3-Zft"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGA-xc-ZeJ">
+                            <button opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QGA-xc-ZeJ">
                                 <rect key="frame" x="16" y="72" width="568" height="165"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -460,13 +466,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aHi-CQ-Wgu" customClass="MapsController" customModule="Buzzed_Buddy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="507"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navigator" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKU-Zt-M6t">
+                                <rect key="frame" x="0.0" y="571" width="600" height="29"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="aHi-CQ-Wgu" secondAttribute="bottom" id="O5i-fb-sE1"/>
+                            <constraint firstAttribute="trailing" secondItem="pKU-Zt-M6t" secondAttribute="trailing" id="1Ad-Sm-PjA"/>
+                            <constraint firstItem="vtc-43-KFZ" firstAttribute="top" secondItem="pKU-Zt-M6t" secondAttribute="bottom" id="C0j-R1-HOR"/>
                             <constraint firstItem="aHi-CQ-Wgu" firstAttribute="top" secondItem="PhI-qJ-Gpc" secondAttribute="bottom" id="Q3b-1f-I3z"/>
+                            <constraint firstItem="pKU-Zt-M6t" firstAttribute="leading" secondItem="X2b-Ze-g9b" secondAttribute="leading" id="dgP-YQ-CTe"/>
+                            <constraint firstItem="pKU-Zt-M6t" firstAttribute="top" secondItem="aHi-CQ-Wgu" secondAttribute="bottom" id="giW-UZ-EiJ"/>
                             <constraint firstAttribute="trailing" secondItem="aHi-CQ-Wgu" secondAttribute="trailing" id="wX5-kn-BGt"/>
                             <constraint firstItem="aHi-CQ-Wgu" firstAttribute="leading" secondItem="X2b-Ze-g9b" secondAttribute="leading" id="wrp-mj-b4x"/>
                         </constraints>
@@ -493,14 +509,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gO0-kw-6L9" customClass="MapsController" customModule="Buzzed_Buddy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="507"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navigator" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUl-cl-UzO">
+                                <rect key="frame" x="0.0" y="571" width="600" height="29"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uUl-cl-UzO" secondAttribute="trailing" id="IpB-np-Xdc"/>
                             <constraint firstItem="gO0-kw-6L9" firstAttribute="top" secondItem="2VQ-2v-vJD" secondAttribute="bottom" id="Q5v-34-IpV"/>
+                            <constraint firstItem="uUl-cl-UzO" firstAttribute="top" secondItem="gO0-kw-6L9" secondAttribute="bottom" id="U4Q-SD-hXD"/>
+                            <constraint firstItem="sYe-BZ-Zoc" firstAttribute="top" secondItem="uUl-cl-UzO" secondAttribute="bottom" id="U67-SG-9Zt"/>
                             <constraint firstItem="gO0-kw-6L9" firstAttribute="leading" secondItem="VgJ-Hp-Zn7" secondAttribute="leading" id="dFE-Uu-Uhs"/>
-                            <constraint firstItem="sYe-BZ-Zoc" firstAttribute="top" secondItem="gO0-kw-6L9" secondAttribute="bottom" id="ibn-mE-zoH"/>
+                            <constraint firstItem="uUl-cl-UzO" firstAttribute="leading" secondItem="VgJ-Hp-Zn7" secondAttribute="leading" id="qsl-cG-FCx"/>
                             <constraint firstAttribute="trailing" secondItem="gO0-kw-6L9" secondAttribute="trailing" id="rrY-R0-JpK"/>
                         </constraints>
                     </view>
@@ -562,7 +588,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vzf-6h-tra"/>
-        <segue reference="zRe-c5-Ywb"/>
+        <segue reference="mdx-r3-Zft"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
