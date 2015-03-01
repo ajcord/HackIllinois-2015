@@ -21,7 +21,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omJ-1L-oir">
                                 <rect key="frame" x="16" y="72" width="568" height="520"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Our goal: To make traveling alone on those late nights a little bit safer, and to ensure that our users make it home. 
+                                <mutableString key="text">Our goal: To make traveling alone on those late nights a little bit safer, and to ensure that our users make it home. 
 
 This app intends to aid, not harm users. We accept no responsibility for any actions, damages, or harm done via the usage of this app.
 
@@ -32,7 +32,7 @@ This app locally stores a user’s home location; this data is not uploaded or s
 Some of the images used in this app are not property of the developers. However, the application icon and launch image are property of the developers, and may not be replicated for distribution without owner permission.
 
 **A big shout out to UIUC for hosting HackIllinois, the event at which this app was created.**
-[ChallengePost Link]
+http://hackillinois2015s.challengepost.com/submissions/33627-buzzed-buddy
 
 Developers:
 Alex Cordonnier, UIUC
@@ -46,7 +46,7 @@ www.github.com/danielcarballal
 
 Paul Gibbons, UIUC
 www.github.com/pualtgibbons
-</string>
+</mutableString>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
